@@ -1,0 +1,268 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Enu Debug|Win32">
+      <Configuration>Enu Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Enu Release|Win32">
+      <Configuration>Enu Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>oglplot</ProjectName>
+    <ProjectGuid>{ED8F2961-1EAC-4DD2-BE54-4883FB1ADB63}</ProjectGuid>
+    <RootNamespace>oglplot</RootNamespace>
+    <Keyword>MFCProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Enu Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Enu Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Enu Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Enu Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>14.0.23107.0</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Enu Debug|Win32'">
+    <OutDir>.\Debug\</OutDir>
+    <IntDir>.\Debug\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Enu Release|Win32'">
+    <OutDir>.\Release\</OutDir>
+    <IntDir>.\Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Enu Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\Debug/General.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_AFXEXT;_GENERALDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>StdAfx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>.\Debug/General.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Debug/</AssemblerListingLocation>
+      <ObjectFileName>.\Debug/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug/</ProgramDataBaseFileName>
+      <WarningLevel>Level4</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;AFX_RESOURCE_DLL;AFX_TARG_ENU;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <ResourceOutputFileName>Debug\GeneralEnu.res</ResourceOutputFileName>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>version.lib;opengl32.lib;glu32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>.\Debug\General32d.dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <ModuleDefinitionFile>.\General32d.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>Debug\General32Enu.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <ImportLibrary>.\Debug/General32d.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Debug/General.bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Enu Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\Release/General.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_AFXEXT;_GENERALDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>StdAfx.h</PrecompiledHeaderFile>
+      <PrecompiledHeaderOutputFile>.\Release/General.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Release/</AssemblerListingLocation>
+      <ObjectFileName>.\Release/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release/</ProgramDataBaseFileName>
+      <WarningLevel>Level4</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;AFX_RESOURCE_DLL;AFX_TARG_ENU;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <ResourceOutputFileName>Release\GeneralEnu.res</ResourceOutputFileName>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>version.lib;opengl32.lib;glu32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>..\..\Release Enu\General32.dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <ModuleDefinitionFile>.\General32.def</ModuleDefinitionFile>
+      <ProgramDatabaseFile>Release\General32Enu.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <ImportLibrary>.\Release/General32.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Release/General.bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="ButtonEx.cpp" />
+    <ClCompile Include="CalcInThreadBase.cpp" />
+    <ClCompile Include="ClientFrm.cpp" />
+    <ClCompile Include="ColorDialogEx.cpp" />
+    <ClCompile Include="CommandLineInfoEx.cpp" />
+    <ClCompile Include="DdxDdvSupport.cpp" />
+    <ClCompile Include="DialogTts.cpp" />
+    <ClCompile Include="DlgAbout.cpp" />
+    <ClCompile Include="DlgFilePrintOptions.cpp" />
+    <ClCompile Include="DlgListCtrl.cpp" />
+    <ClCompile Include="DlgOpenGLInfo.cpp" />
+    <ClCompile Include="DlgOptions.cpp" />
+    <ClCompile Include="DlgProperties.cpp" />
+    <ClCompile Include="DocMgrEx.cpp" />
+    <ClCompile Include="FileDialogEx.cpp" />
+    <ClCompile Include="FormPropertiesView.cpp" />
+    <ClCompile Include="FormViewTts.cpp" />
+    <ClCompile Include="General.cpp" />
+    <ClCompile Include="GlDocument.cpp" />
+    <ClCompile Include="GlView.cpp" />
+    <ClCompile Include="GlWinApp.cpp" />
+    <ClCompile Include="Helper.cpp" />
+    <ClCompile Include="HyperLink.cpp" />
+    <ClCompile Include="IntMatrix.cpp" />
+    <ClCompile Include="ListBoxEx.cpp" />
+    <ClCompile Include="ListCtrlEx.cpp" />
+    <ClCompile Include="ListViewEx.cpp" />
+    <ClCompile Include="MathAdd.cpp" />
+    <ClCompile Include="Matrix.cpp" />
+    <ClCompile Include="PropertyPageAdjust.cpp" />
+    <ClCompile Include="PropertyPageTts.cpp" />
+    <ClCompile Include="PropertySheetAdjust.cpp" />
+    <ClCompile Include="PsRenderer.cpp" />
+    <ClCompile Include="Scale.cpp" />
+    <ClCompile Include="SplitterWndEx.cpp" />
+    <ClCompile Include="StaticExtra.cpp" />
+    <ClCompile Include="StdAfx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Enu Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Enu Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="StringEx.cpp" />
+    <ClCompile Include="TextProgressCtrl.cpp" />
+    <ClCompile Include="ToolBarEx.cpp" />
+    <ClCompile Include="Version.cpp" />
+    <ClCompile Include="WatchInThreadBase.cpp" />
+    <ClCompile Include="WatchInThreadExtra.cpp" />
+    <ClCompile Include="WatchThread.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="General.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="General32.def">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Enu Debug|Win32'">true</ExcludedFromBuild>
+    </CustomBuild>
+    <CustomBuild Include="General32d.def">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Enu Release|Win32'">true</ExcludedFromBuild>
+    </CustomBuild>
+    <None Include="Resource.hm" />
+    <None Include="res\CursorDblCross.cur" />
+    <None Include="res\CursorHand.cur" />
+    <None Include="res\General.rc2" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ButtonEx.h" />
+    <ClInclude Include="CalcInThreadBase.h" />
+    <ClInclude Include="ClientFrm.h" />
+    <ClInclude Include="ColorDialogEx.h" />
+    <ClInclude Include="CommandLineInfoEx.h" />
+    <ClInclude Include="DdxDdvSupport.h" />
+    <ClInclude Include="DialogTts.h" />
+    <ClInclude Include="DlgAbout.h" />
+    <ClInclude Include="DlgFilePrintOptions.h" />
+    <ClInclude Include="DlgListCtrl.h" />
+    <ClInclude Include="DlgOpenGLInfo.h" />
+    <ClInclude Include="DlgOptions.h" />
+    <ClInclude Include="DlgProperties.h" />
+    <ClInclude Include="DocMgrEx.h" />
+    <ClInclude Include="FileDialogEx.h" />
+    <ClInclude Include="FormPropertiesView.h" />
+    <ClInclude Include="FormViewTts.h" />
+    <ClInclude Include="General.h" />
+    <ClInclude Include="GlDocument.h" />
+    <ClInclude Include="GlView.h" />
+    <ClInclude Include="GlWinApp.h" />
+    <ClInclude Include="Helper.h" />
+    <ClInclude Include="HyperLink.h" />
+    <ClInclude Include="IntMatrix.h" />
+    <ClInclude Include="ListBoxEx.h" />
+    <ClInclude Include="ListCtrlEx.h" />
+    <ClInclude Include="ListViewEx.h" />
+    <ClInclude Include="MathAdd.h" />
+    <ClInclude Include="Matrix.h" />
+    <ClInclude Include="MemDC.h" />
+    <ClInclude Include="PropertyPageAdjust.h" />
+    <ClInclude Include="PropertyPageTts.h" />
+    <ClInclude Include="PropertySheetAdjust.h" />
+    <ClInclude Include="PsRenderer.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="Scale.h" />
+    <ClInclude Include="SplitterWndEx.h" />
+    <ClInclude Include="StaticExtra.h" />
+    <ClInclude Include="StdAfx.h" />
+    <ClInclude Include="StringEx.h" />
+    <ClInclude Include="TextProgressCtrl.h" />
+    <ClInclude Include="ToolBarEx.h" />
+    <ClInclude Include="Version.h" />
+    <ClInclude Include="WatchInThreadBase.h" />
+    <ClInclude Include="WatchInThreadExtra.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="What%27s new.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

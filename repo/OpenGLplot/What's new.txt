@@ -1,0 +1,252 @@
+3.003.2.011		"What's new" file added.
+
+3.003.3.012		CGlView can handle WM_SETTINGCHANGE such that a change of color depth
+				recreates the window and reinitializes OpenGL. Furthermore if
+				ChoosePixelFormat fails we try to get a double buffered pixel format.
+
+3.003.4.013		CGlView has it's own ChoosePixelFormat. Furthermore we can choose to 
+				enable/disable hardware acceleration.
+
+3.003.5.014		Common STRINGTABLE entries moved to General project.
+				Classes CListCtrlEx and CDlgListCtrl added.
+				Shortcuts visible to the user.
+				CDlgOptions::OnButtonShortcuts and CDlgOpenGLInfo::OnButtonDetails()
+				revised.
+
+3.003.6.015		reverse added for CMatrix and CIntMatrix.
+
+3.004.6.016		Rearranged for MultiLanguage support.
+
+3.004.7.016		Bug fix in SetWindowPixelFormat/SetMemDcPixelFormat. (Additional
+				parameter bUseAPI to force ChoosePixelFormat API added.)
+
+3.004.8.017		LauchApp added (explicitely exported by .def file) - Usage by 
+				InstallShield Free Edition.
+
+3.004.9.018		CGlWinApp::GetRecentFileList() added/CDlgOptions::EnableExtraEdit()
+				modified.
+				m_bNoHardwareAcceleration == TRUE by default.
+
+3.004.9.019		CharCount added.
+				Several CMatrix/CIntMatrix functions improved.
+				Default URL is no longer provided.
+
+3.004.9.020		CSplitterWndEx extended by focus highlighting. 
+				(Involves modifications in OnActivateView.)
+				GetTemplateRect added. Layout revised.
+
+3.004.10.021	PostScript Support added.
+
+3.005.10.022	EMF Support added.
+				GetVersionInfo overridden.
+				File watching added.
+
+3.005.11.023	CWatchInThreadBase and CCalculateInThreadBase created, 
+				CGlDocument revised.
+
+3.005.12.024	Function names revised (Load -> Open).
+				m_bNoHardwareAcceleration == FALSE by default (see also 
+				http://support.microsoft.com/support/kb/articles/q272/2/22.asp).
+
+3.005.13.026	CListViewEx, CListBoxEx, RGB2HLS, HLS2RGB added.
+
+3.005.14.027	CListCtrlEx, CListBoxEx revised.
+
+3.005.15.028	wkreset renamed to arcreset, rounderg renamed to roundres.
+				frem(x,y) rearranged from x-y*fix(x/y) to x-y*floor(x/y).
+				frem(x,0.) returns quiet NaN.
+
+3.005.16.032	CCommandLineInfoEx added.
+
+3.006.15.033	ReadRecordFromStream, CFileDialogEx, CDocManagerEx added.
+
+3.006.16.034	CTextProgressCtrl enlarged.
+
+3.006.17.035	CWatchInThreadExtra and CStaticExtra added.
+
+3.006.18.036	CWatchInThreadExtra improved.
+
+3.007.18.037	Resource leak fix. Bug fix in matrix comparison operators.
+				CMatrix, CIntmatrix revised.
+
+3.007.19.038	CSplitterWndEx::PreTranslateMessage removed, CSplitterWndEx::ActivateNext
+				und CSplitterWndEx::CanActivateNext added.
+				(Handling by VK_F6 instead of VK_F4.)
+
+3.007.20.039	Full support für VC++ 5.0 restored.
+
+3.008.20.040	CColorDialogEx added, reduceSize improved.
+
+3.008.21.041	CMatrix& CMatrix::operator=(const double& inValue) and 
+				CIntMatrix& CIntMatrix::operator=(const int& inValue) added.
+
+3.008.22.042	CGlWinApp::ExistShortcut added, CDlgOptions::EnableExtraEdit
+				improved.
+
+3.009.22.043	Monochrome rendering added. Property dialogs (CDlgProperties and
+				CFormPropertiesView) revised and moved to project "General".
+
+3.009.23.044	OnEditUndo implemented.
+
+3.009.24.045	Bug fix in CMatrix::Serialize.
+
+3.009.25.046	TimedMessageBox, AfxTimedMessageBox und CGlWinApp::DoTimedMessageBox added.
+
+3.010.25.047	CButtonEx added. Minor changes in CClientFrame, CHyperLink and CTextProgressCtrl.
+				CColorDialogEx::OnTimer added.
+
+3.010.26.048	CSplitterWndEx::IdFromRowColEx and CSplitterWndEx::GetPaneEx added.
+
+3.010.27.049	::GetItemTemplateRect improved and ::GetItemTemplateRect added.
+				CPropertyPageAdjust::OnCreate simplified.
+				CSplitterWndEx::IsChildPaneEx added.
+				CButtonEx improved.
+
+3.011.27.050	Macros AFX_EXT_CLASS/AFX_EXT_API replaced by own 
+				macros AFX_EXT_CLASS_GENERAL/AFX_EXT_API_GENERAL.
+				GetDefaultPushButton, SetDefaultPushButton, IsDefaultPushButton and
+				IsPushButton added.
+
+3.011.28.051	CFormPropertiesView tooltip suppoert added.
+				Several minor changes.
+				Message handler WM_RBUTTONUP replaced by WM_CONTEXTMENU.
+
+3.011.29.052	CSplitterWndEx::GetIdealRowInfo, CSplitterWndEx::GetIdealColumnInfo and 
+				::UnsetDefaultPushButton added.
+
+3.011.30.053	DDV_... functions improved.
+				WM_TIMER handling reorganized.
+
+3.011.32.056	ReadRecordFromStream(FILE*& stream, CString& str) added.
+				TimedMessageBox improved.
+
+3.011.33.057	CGlWinApp::m_custColors, CGlWinApp::GetCustColors and
+				CGlWinApp::GetCustColorsCount added.
+				CGlView::MakeColorsRainbowOrMonochrome is now virtual and has one more
+				(int) parameter.
+
+3.011.35.059	UpdateSliderScalePos/UpdateSliderTranslationPos are now virtual functions of
+				CGlView. GetFromZoomHistory is now only in the General32 project.
+				InitGeometry/OnSize modified.
+
+3.011.36.061	TimedMessageBox improved,  AttachThreadInput introduced, 
+				CSplitterWndEx::OnShowWindow added.
+
+3.011.37.062	CGlWinApp::m_nCopyResolution introduced. Printing/copy resolution (DPI) 
+				corrected. CGlView::OnSize bug fixed.
+
+3.011.38.063	TestDockState, CGlView::EditCopy added.
+
+3.011.39.064	CDocManagerEx::DoPromptFileName improved.
+
+3.011.40.065	Grid (lines) improved.
+
+3.011.40.065	Changes in CGlView: m_xRotation, m_yRotation, m_xRotationStore, m_yRotationStore,
+				m_xTranslation, m_yTranslation, m_zTranslation, m_xScaling, m_yScaling, m_zScaling, 
+				are now of type double. 
+				Thin lines added to grid. 2D grid is now self refining. 
+				Grid labels improved.
+
+3.011.41.066	CGlView::GetExtraXTranslation, CGlView::GetExtraYTranslation, CGlView::GetExtraZTranslation,
+				CGlView::GetExtraXScaling, CGlView::GetExtraYScaling and CGlView::GetExtraZScaling
+				introduced.
+
+3.011.42.067	Use of CGlView::GetExtraYTranslation, CGlView::GetExtraZTranslation, 
+				CGlView::GetExtraYScaling und CGlView::GetExtraZScaling revised.
+				Slight improvements in CDlgProperties, CFormPropertiesView and CGlView.
+
+3.011.43.068	Bug fixes in CGlView::RenderSceneScale2d(), CGlView::RenderSceneScale3d():
+				Size is now determined by viewport[] instead of GetClientrect(&rect).
+				Bug fix in CGlDocument::OnPrint(): nYViewRes is now getting corrected correctly.
+				Improvements in CGlWinApp::OnFilePrintPreviewEx() and CGlWinApp::OnUpdateFilePrintPreviewEx().
+
+3.011.44.070	MapDialogUnitX, MapDialogUnitY added.
+
+3.011.45.072	Bug fix in GetItemTemplateRect. (LPDLGITEMTEMPLATEEX is now used for DIALOGEX resources.)
+
+3.011.46.073	CIntMatrix::CIntMatrix(const CIntMatrix& inMatrix, const KINDOFORDER& nKindOfOrder),
+				CIntMatrix::CIntMatrix(const CMatrix& inMatrix, const KINDOFORDER& nKindOfOrder),
+				void CIntMatrix::CopyContents(const CIntMatrix& inMatrix),
+				void CIntMatrix::CopyContents(const CMatrix& inMatrix),
+				void CIntMatrix::SetOrder(KINDOFORDER nKindOfOrder),
+				CMatrix::CMatrix(const CMatrix& inMatrix, const KINDOFORDER& nKindOfOrder),
+				CMatrix::CMatrix(const CIntMatrix& inMatrix, const KINDOFORDER& nKindOfOrder),
+				void CMatrix::CopyContents(const CMatrix& inMatrix),
+				void CMatrix::CopyContents(const CIntMatrix& inMatrix),
+				void CMatrix::SetOrder(KINDOFORDER nKindOfOrder)
+				added.
+
+3.011.47.074	CStaticExtra, CDlgProperties, CFormPropertiesView improved (now flicker free).
+
+3.011.48.077	CIntMatrix _finite(const CMatrix& inMatrix), CIntMatrix _isnan(const CMatrix& inMatrix) 
+				und CIntMatrix::operator!() added.
+
+3.011.49.078	rowProd, colProd, prod added.
+				Bug fix: 
+				#define	QNAN	(HUGE/HUGE)
+				replaced by
+				const double QNAN = fmod(0., 0.);
+
+3.011.50.079	_isinf added.
+
+3.011.51.080	round and fix improved.
+
+3.011.52.081	sign returns +1. for QNAN now.
+
+3.011.53.082	concatHor and concatVert improved.
+				int CIntMatrix::GetLength() const
+				int CMatrix::GetLength() const
+				void CIntMatrix::operator*=(const CIntMatrix& inMatrix)
+				void CMatrix::operator*=(const CMatrix& inMatrix)
+				added.
+
+3.012.53.083	CPropertyPageTts, CDialogTts and CFormViewTts added.
+
+3.012.54.084	CGlView::OnActivateView improved,
+				CFormViewTts::OnActivateView added.
+
+3.012.55.085	TranslateMessage/DispatchMessage replaced by PumpMessage/PostQuitMessage.
+				Bug fix in CSplitterWndEx (m_bEnableResizing).
+
+3.012.56.086	IsEdit, IsEnabled, UpdateDialogControl added.
+
+3.012.57.087	CGlDocument::CheckVersion added.
+
+3.012.58.089	CGlView::CheckForeColor, CGlView::CheckFontColor replaced by CGlView::CheckColors.
+
+3.012.59.090	RunExtraLoop added.
+
+3.012.60.091	PrepareBkgnd is now in OnPreparePrinting (not in OnBeginPrinting any more).
+				That forced wrong colors if no default printer is present.
+				Furthermore CGlView uses now glDrawBuffer instead of glColorMask to fade out when
+				determining the width of strings.
+				CGlView::ChoosePixelFormat improved (Flags have other weights now).
+				Bug fix in CGlView::RenderSceneScale2d/CGlView::RenderSceneScale3d.
+
+3.012.61.092	Switched from compiler option /W3 to /W4.
+
+3.012.62.094	CGlView::DrawBufferOrStencil added.
+				Bug fix in ReadRecordFromStream, ReadQuotedStringFromStream, ReadLineFromStream.
+
+3.012.63.095	AfxGetSafeMainWnd added.
+
+3.012.64.096	CSplitterWndEx::SetActivePane added.
+				BlendColors revised.
+
+3.012.65.097	CGlDocument::OnCloseDocument added to execute ShutDownWatchThreadSafely
+				in time (in SDI applications destructor is not always called).
+				ReadLineFromStream now for binary opened files too.
+				CDlgFilePrintOptions revised.
+
+3.012.66.098	TimedMessageBox revised.
+
+3.012.67.099	DrawHorizontalBands/DrawVerticalBands added.
+
+3.012.68.100	GetOSRunning, CGlDocument::OnOpenDocument revised.
+
+3.012.69.102	DDX_TextComma2 added.
+
+3.012.70.103	GetOSRunning is now exported.
+
+3.012.71.104	Labeling of axes in 3D views added, yields
+				changes in CGlView, CDlgProperties, CFormPropertiesView.

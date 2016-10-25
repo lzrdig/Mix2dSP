@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{92C48651-1C37-4C09-897D-62700782617B}</ProjectGuid>
+    <RootNamespace>FFTW2dll</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>14.0.23107.0</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>.\Debug\</OutDir>
+    <IntDir>.\Debug\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>.\Release\</OutDir>
+    <IntDir>.\Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\Debug/FFTW2dll.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\fftw;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_DEBUG;WIN32;_WINDOWS;BUILD_FFTW_DLL;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeaderOutputFile>.\Debug/FFTW2dll.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Debug/</AssemblerListingLocation>
+      <ObjectFileName>.\Debug/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Link>
+      <OutputFile>.\Debug/FFTW2dll.dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <ModuleDefinitionFile>.\fftw2dll.def</ModuleDefinitionFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>.\Debug/FFTW2dll.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <ImportLibrary>.\Debug/FFTW2dll.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Debug/FFTW2dll.bsc</OutputFile>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TargetEnvironment>Win32</TargetEnvironment>
+      <TypeLibraryName>.\Release/FFTW2dll.tlb</TypeLibraryName>
+      <HeaderFileName />
+    </Midl>
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>..\..\fftw;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>NDEBUG;WIN32;_WINDOWS;BUILD_FFTW_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeaderOutputFile>.\Release/FFTW2dll.pch</PrecompiledHeaderOutputFile>
+      <AssemblerListingLocation>.\Release/</AssemblerListingLocation>
+      <ObjectFileName>.\Release/</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release/</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+    </ResourceCompile>
+    <Link>
+      <OutputFile>.\Release/FFTW2dll.dll</OutputFile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <ModuleDefinitionFile>.\fftw2dll.def</ModuleDefinitionFile>
+      <ProgramDatabaseFile>.\Release/FFTW2dll.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <ImportLibrary>.\Release/FFTW2dll.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Release/FFTW2dll.bsc</OutputFile>
+    </Bscmake>
+    <PostBuildEvent>
+      <Message>Install</Message>
+      <Command>copy Release\FFTW2dll.dll ..\Install
+copy Release\FFTW2dll.lib  ..\Install
+copy Release\FFTW2dll.exp ..\Install
+</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="fftw\config.c" />
+    <ClCompile Include="fftw\executor.c" />
+    <ClCompile Include="fftw\fftwnd.c" />
+    <ClCompile Include="fftw\fni_1.c" />
+    <ClCompile Include="fftw\fni_10.c" />
+    <ClCompile Include="fftw\fni_11.c" />
+    <ClCompile Include="fftw\fni_12.c" />
+    <ClCompile Include="fftw\fni_13.c" />
+    <ClCompile Include="fftw\fni_14.c" />
+    <ClCompile Include="fftw\fni_15.c" />
+    <ClCompile Include="fftw\fni_16.c" />
+    <ClCompile Include="fftw\fni_2.c" />
+    <ClCompile Include="fftw\fni_3.c" />
+    <ClCompile Include="fftw\fni_32.c" />
+    <ClCompile Include="fftw\fni_4.c" />
+    <ClCompile Include="fftw\fni_5.c" />
+    <ClCompile Include="fftw\fni_6.c" />
+    <ClCompile Include="fftw\fni_64.c" />
+    <ClCompile Include="fftw\fni_7.c" />
+    <ClCompile Include="fftw\fni_8.c" />
+    <ClCompile Include="fftw\fni_9.c" />
+    <ClCompile Include="fftw\fn_1.c" />
+    <ClCompile Include="fftw\fn_10.c" />
+    <ClCompile Include="fftw\fn_11.c" />
+    <ClCompile Include="fftw\fn_12.c" />
+    <ClCompile Include="fftw\fn_13.c" />
+    <ClCompile Include="fftw\fn_14.c" />
+    <ClCompile Include="fftw\fn_15.c" />
+    <ClCompile Include="fftw\fn_16.c" />
+    <ClCompile Include="fftw\fn_2.c" />
+    <ClCompile Include="fftw\fn_3.c" />
+    <ClCompile Include="fftw\fn_32.c" />
+    <ClCompile Include="fftw\fn_4.c" />
+    <ClCompile Include="fftw\fn_5.c" />
+    <ClCompile Include="fftw\fn_6.c" />
+    <ClCompile Include="fftw\fn_64.c" />
+    <ClCompile Include="fftw\fn_7.c" />
+    <ClCompile Include="fftw\fn_8.c" />
+    <ClCompile Include="fftw\fn_9.c" />
+    <ClCompile Include="fftw\ftwi_10.c" />
+    <ClCompile Include="fftw\ftwi_16.c" />
+    <ClCompile Include="fftw\ftwi_2.c" />
+    <ClCompile Include="fftw\ftwi_3.c" />
+    <ClCompile Include="fftw\ftwi_32.c" />
+    <ClCompile Include="fftw\ftwi_4.c" />
+    <ClCompile Include="fftw\ftwi_5.c" />
+    <ClCompile Include="fftw\ftwi_6.c" />
+    <ClCompile Include="fftw\ftwi_64.c" />
+    <ClCompile Include="fftw\ftwi_7.c" />
+    <ClCompile Include="fftw\ftwi_8.c" />
+    <ClCompile Include="fftw\ftwi_9.c" />
+    <ClCompile Include="fftw\ftw_10.c" />
+    <ClCompile Include="fftw\ftw_16.c" />
+    <ClCompile Include="fftw\ftw_2.c" />
+    <ClCompile Include="fftw\ftw_3.c" />
+    <ClCompile Include="fftw\ftw_32.c" />
+    <ClCompile Include="fftw\ftw_4.c" />
+    <ClCompile Include="fftw\ftw_5.c" />
+    <ClCompile Include="fftw\ftw_6.c" />
+    <ClCompile Include="fftw\ftw_64.c" />
+    <ClCompile Include="fftw\ftw_7.c" />
+    <ClCompile Include="fftw\ftw_8.c" />
+    <ClCompile Include="fftw\ftw_9.c" />
+    <ClCompile Include="fftw\generic.c" />
+    <ClCompile Include="fftw\malloc.c" />
+    <ClCompile Include="fftw\planner.c" />
+    <ClCompile Include="fftw\putils.c" />
+    <ClCompile Include="fftw\rader.c" />
+    <ClCompile Include="fftw\timer.c" />
+    <ClCompile Include="fftw\twiddle.c" />
+    <ClCompile Include="fftw\wisdom.c" />
+    <ClCompile Include="fftw\wisdomio.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="fftw2dll.def" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

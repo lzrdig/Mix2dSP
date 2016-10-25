@@ -1,0 +1,31 @@
+ d effective (pm/V)                    =   12.100 
+ deltak (1/mm) kp-ks-ki                =    0.000 
+ Crystal Length (mm)/Number of z steps =   10.000   /   50 
+ Distance to the detector (mm)         =    0.000 
+
+                                           Signal      Idler      Pump
+ Wavelength (nm)                       =  860.000    860.000   430.000
+ Index of refraction                   =    2.278      2.278     2.278
+ Group velocity index (gvi)            =    2.396      2.396     2.759
+ Group velocity dispersion (gvd)       =  -1.57e+005 -1.57e+005 -3.63e+005
+ Phase (radians)                       =    0.000      0.000     0.000
+ Crystal input reflectivity            =    0.000      0.000     0.000
+ Crystal output reflectivity           =    0.000      0.000     0.000
+ Crystal absorption (1/mm)             =    0.000      0.000     0.000
+ Pulse energy (J)                      =  5.00e-012  5.00e-012 0.00e+000
+ Pulse duration (ps)                   =    0.130      0.130     0.130
+ Pulse delay relative to pump (ps)     =    0.000      0.000
+ Beam Diameter (mm)                    =  1.15e-001  1.15e-001 1.15e-001
+ Walkoff angle (mrad)                  =    0.000      0.000     0.000
+ Beam offset relative to pump (mm)     =    0.000      0.000
+ Radius of curvature (mm in air)       =  2.31e+000  2.31e+000 2.31e+000
+ Gaussian index order                  =    1.000      1.000     1.000
+ Maximum grid extent (mm in x,y)       =    0.575      0.460
+ Number of grid points (x,y,t)         =      8          8         32
+
+
+ Input Peak Irradiance (W/m^2)         =  2.411e+009 2.411e+009 0.000e+000
+ Input Peak Fluence (J/m^2)            =  3.337e-004 3.337e-004 0.000e+000
+ Input Peak Power (W)                  =  3.613e+001 3.613e+001 0.000e+000
+ Output Peak Irradiance (W/m^2)        =  5.128e+006 5.128e+006 7.607e+000
+ Output Pulse Energy (J)               =  6.068e-014 6.068e-014 1.897e-018

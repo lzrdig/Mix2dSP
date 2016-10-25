@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "mix2dsp", "repo\Mix2dSP\mix2dsp.vcxproj", "{06642959-EBD8-4FD3-B1EC-DAEE1FA42AA9}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "oglplot", "repo\OpenGLplot\General.vcxproj", "{ED8F2961-1EAC-4DD2-BE54-4883FB1ADB63}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FFTW2dll", "repo\FFTW2dll\FFTW2dll.vcxproj", "{92C48651-1C37-4C09-897D-62700782617B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Enu Debug|x86 = Enu Debug|x86
+		Enu Release|x86 = Enu Release|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{06642959-EBD8-4FD3-B1EC-DAEE1FA42AA9}.Debug|x86.ActiveCfg = Debug|Win32
+		{06642959-EBD8-4FD3-B1EC-DAEE1FA42AA9}.Debug|x86.Build.0 = Debug|Win32
+		{06642959-EBD8-4FD3-B1EC-DAEE1FA42AA9}.Enu Debug|x86.ActiveCfg = Debug|Win32
+		{06642959-EBD8-4FD3-B1EC-DAEE1FA42AA9}.Enu Debug|x86.Build.0 = Debug|Win32
+		{06642959-EBD8-4FD3-B1EC-DAEE1FA42AA9}.Enu Release|x86.ActiveCfg = Release|Win32
+		{06642959-EBD8-4FD3-B1EC-DAEE1FA42AA9}.Enu Release|x86.Build.0 = Release|Win32
+		{06642959-EBD8-4FD3-B1EC-DAEE1FA42AA9}.Release|x86.ActiveCfg = Release|Win32
+		{06642959-EBD8-4FD3-B1EC-DAEE1FA42AA9}.Release|x86.Build.0 = Release|Win32
+		{ED8F2961-1EAC-4DD2-BE54-4883FB1ADB63}.Debug|x86.ActiveCfg = Enu Debug|Win32
+		{ED8F2961-1EAC-4DD2-BE54-4883FB1ADB63}.Debug|x86.Build.0 = Enu Debug|Win32
+		{ED8F2961-1EAC-4DD2-BE54-4883FB1ADB63}.Enu Debug|x86.ActiveCfg = Enu Debug|Win32
+		{ED8F2961-1EAC-4DD2-BE54-4883FB1ADB63}.Enu Debug|x86.Build.0 = Enu Debug|Win32
+		{ED8F2961-1EAC-4DD2-BE54-4883FB1ADB63}.Enu Release|x86.ActiveCfg = Enu Release|Win32
+		{ED8F2961-1EAC-4DD2-BE54-4883FB1ADB63}.Enu Release|x86.Build.0 = Enu Release|Win32
+		{ED8F2961-1EAC-4DD2-BE54-4883FB1ADB63}.Release|x86.ActiveCfg = Enu Release|Win32
+		{ED8F2961-1EAC-4DD2-BE54-4883FB1ADB63}.Release|x86.Build.0 = Enu Release|Win32
+		{92C48651-1C37-4C09-897D-62700782617B}.Debug|x86.ActiveCfg = Debug|Win32
+		{92C48651-1C37-4C09-897D-62700782617B}.Debug|x86.Build.0 = Debug|Win32
+		{92C48651-1C37-4C09-897D-62700782617B}.Enu Debug|x86.ActiveCfg = Debug|Win32
+		{92C48651-1C37-4C09-897D-62700782617B}.Enu Debug|x86.Build.0 = Debug|Win32
+		{92C48651-1C37-4C09-897D-62700782617B}.Enu Release|x86.ActiveCfg = Release|Win32
+		{92C48651-1C37-4C09-897D-62700782617B}.Enu Release|x86.Build.0 = Release|Win32
+		{92C48651-1C37-4C09-897D-62700782617B}.Release|x86.ActiveCfg = Release|Win32
+		{92C48651-1C37-4C09-897D-62700782617B}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

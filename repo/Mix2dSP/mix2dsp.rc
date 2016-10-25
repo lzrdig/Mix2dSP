@@ -1,0 +1,643 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif\r\n"
+    "#include ""res\\Mix2dsp.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\Mix2dsp.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "Extras"
+    BEGIN
+        MENUITEM "Mismatch Scan",               ID_EXTRAS_KVEC
+        MENUITEM "Energy Scan",                 ID_EXTRAS_ERG
+        MENUITEM "Lens option",                 ID_EXTRAS_LENS
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About Mix2dsp...",           ID_APP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS 
+BEGIN
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY 
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG  0, 0, 297, 101
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About Mix2dsp"
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    DEFPUSHBUTTON   "OK",IDOK,255,15,32,14,WS_GROUP
+    LTEXT           "Diffractive short-pulse mixing  - Version 1.0",IDC_STATIC,40,20,210,10,SS_NOPREFIX
+    LTEXT           "Based upon the SNLO function 2D_Mix_SP by:  Arlee V. Smith",IDC_STATIC,40,37,200,10
+    LTEXT           "C++ code and GUI development by:  Chris K. Schultz",IDC_STATIC,40,53,175,10
+    LTEXT           "Sandia National Laboratories,  Albuquerque, NM",IDC_STATIC,40,69,190,10
+END
+
+IDD_INPUT_FORM DIALOGEX 0, 0, 496, 286
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_WAVELENGTH_S,95,20,43,10,ES_AUTOHSCROLL
+    EDITTEXT        IDC_WAVELENGTH_I,144,20,42,10,ES_AUTOHSCROLL
+    EDITTEXT        IDC_WAVELENGTH_P,193,20,42,10,ES_AUTOHSCROLL
+    EDITTEXT        IDC_INDEX_S,95,35,42,10,ES_AUTOHSCROLL
+    EDITTEXT        IDC_INDEX_I,144,35,42,10,ES_AUTOHSCROLL
+    EDITTEXT        IDC_INDEX_P,193,35,42,10,ES_AUTOHSCROLL
+    EDITTEXT        IDC_GVI_S,95,49,42,10,ES_AUTOHSCROLL
+    EDITTEXT        IDC_GVI_I,144,49,42,10,ES_AUTOHSCROLL
+    EDITTEXT        IDC_GVI_P,193,49,42,10,ES_AUTOHSCROLL
+    EDITTEXT        IDC_GVD_S,95,64,42,10,ES_AUTOHSCROLL
+    EDITTEXT        IDC_GVD_I,144,64,42,10,ES_AUTOHSCROLL
+    EDITTEXT        IDC_GVD_P,193,64,42,10,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PHASE_S,95,79,42,10,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PHASE_I,144,79,42,10,ES_AUTOHSCROLL
+    EDITTEXT        IDC_PHASE_P,193,79,42,10,ES_AUTOHSCROLL
+    EDITTEXT        IDC_RIN_S,96,94,41,10,ES_AUTOHSCROLL
+    EDITTEXT        IDC_RIN_I,144,94,42,10,ES_AUTOHSCROLL
+    EDITTEXT        IDC_RIN_P,193,94,42,10,ES_AUTOHSCROLL
+    EDITTEXT        IDC_ROUT_S,95,109,42,10,ES_AUTOHSCROLL
+    EDITTEXT        IDC_ROUT_I,145,109,41,10,ES_AUTOHSCROLL
+    EDITTEXT        IDC_ROUT_P,193,109,42,10,ES_AUTOHSCROLL
+    EDITTEXT        IDC_ALPHA_S,95,124,42,10,ES_AUTOHSCROLL
+    EDITTEXT        IDC_ALPHA_I,144,124,42,10,ES_AUTOHSCROLL
+    EDITTEXT        IDC_ALPHA_P,193,124,42,10,ES_AUTOHSCROLL
+    EDITTEXT        IDC_ENERGY_S,95,140,42,10,ES_AUTOHSCROLL
+    EDITTEXT        IDC_ENERGY_I,144,140,42,10,ES_AUTOHSCROLL
+    EDITTEXT        IDC_ENERGY_P,193,140,42,10,ES_AUTOHSCROLL
+    EDITTEXT        IDC_DURATION_S,95,155,42,10,ES_AUTOHSCROLL
+    EDITTEXT        IDC_DURATION_I,144,155,42,10,ES_AUTOHSCROLL
+    EDITTEXT        IDC_DURATION_P,193,155,42,10,ES_AUTOHSCROLL
+    EDITTEXT        IDC_DELAY_S,95,169,42,10,ES_AUTOHSCROLL
+    EDITTEXT        IDC_DELAY_I,144,169,42,10,ES_AUTOHSCROLL
+    EDITTEXT        IDC_BEAMDIAM_S,95,185,42,10,ES_AUTOHSCROLL
+    EDITTEXT        IDC_BEAMDIAM_I,144,185,42,10,ES_AUTOHSCROLL
+    EDITTEXT        IDC_BEAMDIAM_P,194,185,41,10,ES_AUTOHSCROLL
+    EDITTEXT        IDC_WALKOFF_S,95,200,42,10,ES_AUTOHSCROLL
+    EDITTEXT        IDC_WALKOFF_I,144,200,42,10,ES_AUTOHSCROLL
+    EDITTEXT        IDC_WALKOFF_P,194,200,41,10,ES_AUTOHSCROLL
+    EDITTEXT        IDC_OFFSET_S,95,215,42,10,ES_AUTOHSCROLL
+    EDITTEXT        IDC_OFFSET_I,145,215,41,10,ES_AUTOHSCROLL
+    EDITTEXT        IDC_RADCURV_S,96,230,41,10,ES_AUTOHSCROLL
+    EDITTEXT        IDC_RADCURV_I,145,230,41,10,ES_AUTOHSCROLL
+    EDITTEXT        IDC_RADCURV_P,193,230,42,10,ES_AUTOHSCROLL
+    EDITTEXT        IDC_GAUSS_S,95,244,42,10,ES_AUTOHSCROLL
+    EDITTEXT        IDC_GAUSS_I,145,244,42,10,ES_AUTOHSCROLL
+    EDITTEXT        IDC_GAUSS_P,193,244,42,10,ES_AUTOHSCROLL
+    EDITTEXT        IDC_CRYSTLENGTH,338,20,42,10,ES_AUTOHSCROLL
+    EDITTEXT        IDC_DEFF,338,35,42,10,ES_AUTOHSCROLL
+    EDITTEXT        IDC_DELTAK,338,50,42,10,ES_AUTOHSCROLL
+    EDITTEXT        IDC_ZSTEP,338,65,42,10,ES_AUTOHSCROLL
+    EDITTEXT        IDC_DIST,338,80,42,10,ES_AUTOHSCROLL
+    EDITTEXT        IDC_N2_S1,338,95,42,10,ES_AUTOHSCROLL
+    EDITTEXT        IDC_N2_S2,387,95,42,10,ES_AUTOHSCROLL
+    EDITTEXT        IDC_N2_S3,436,95,42,10,ES_AUTOHSCROLL
+    EDITTEXT        IDC_N2_I1,338,110,42,10,ES_AUTOHSCROLL
+    EDITTEXT        IDC_N2_I2,387,110,42,10,ES_AUTOHSCROLL
+    EDITTEXT        IDC_N2_I3,436,110,42,10,ES_AUTOHSCROLL
+    EDITTEXT        IDC_N2_P1,338,125,42,10,ES_AUTOHSCROLL
+    EDITTEXT        IDC_N2_P2,387,125,42,10,ES_AUTOHSCROLL
+    EDITTEXT        IDC_N2_P3,436,125,42,10,ES_AUTOHSCROLL
+    EDITTEXT        IDC_BETA_S1,338,140,42,10,ES_AUTOHSCROLL
+    EDITTEXT        IDC_BETA_S2,388,140,41,10,ES_AUTOHSCROLL
+    EDITTEXT        IDC_BETA_S3,436,140,42,10,ES_AUTOHSCROLL
+    EDITTEXT        IDC_BETA_I1,338,155,42,10,ES_AUTOHSCROLL
+    EDITTEXT        IDC_BETA_I2,387,155,42,10,ES_AUTOHSCROLL
+    EDITTEXT        IDC_BETA_I3,436,155,42,10,ES_AUTOHSCROLL
+    EDITTEXT        IDC_BETA_P1,338,171,42,10,ES_AUTOHSCROLL
+    EDITTEXT        IDC_BETA_P2,387,171,42,10,ES_AUTOHSCROLL
+    EDITTEXT        IDC_BETA_P3,436,171,42,10,ES_AUTOHSCROLL
+    EDITTEXT        IDC_XPOINTS,338,201,42,10,ES_AUTOHSCROLL
+    EDITTEXT        IDC_YPOINTS,388,201,41,10,ES_AUTOHSCROLL
+    EDITTEXT        IDC_TPOINTS,436,201,42,10,ES_AUTOHSCROLL
+    EDITTEXT        IDC_XGRID,338,216,42,10,ES_AUTOHSCROLL
+    EDITTEXT        IDC_YGRID,388,216,41,10,ES_AUTOHSCROLL
+    PUSHBUTTON      "Accept",IDC_ACCEPT,405,20,65,13
+    LTEXT           "Wavelengths (nm):",IDC_STATIC,5,21,75,10
+    LTEXT           "Index of refraction:",IDC_STATIC,5,36,75,10
+    LTEXT           "Group velocity index:",IDC_STATIC,5,49,75,10
+    LTEXT           "Group velocity dispersion:",IDC_STATIC,5,65,85,10
+    LTEXT           "Phase (radians):",IDC_STATIC,5,79,75,10
+    LTEXT           "Input face reflectivity:",IDC_STATIC,5,94,75,10
+    LTEXT           "Output face reflectivity:",IDC_STATIC,5,108,80,10
+    LTEXT           "Crystal absorption (1/mm):",IDC_STATIC,6,125,85,10
+    LTEXT           "Pulse energy (J):",IDC_STATIC,5,141,75,10
+    LTEXT           "Pulse duration (ps):",IDC_STATIC,5,155,75,10
+    LTEXT           "Pulse delay (ps):",IDC_STATIC,5,170,75,10
+    LTEXT           "Beam diameter (mm):",IDC_STATIC,5,185,75,10
+    LTEXT           "Walkoff angle (mrad):",IDC_STATIC,5,200,75,10
+    LTEXT           "Beam offset (mm):",IDC_STATIC,5,215,80,10
+    LTEXT           "Radius of curvature (mm):",IDC_STATIC,5,230,82,10
+    LTEXT           "Number of grid pts. (x,y,t):",IDC_STATIC,248,202,80,10
+    LTEXT           "Max. grid extent [x,y] (mm):",IDC_STATIC,248,217,85,10
+    LTEXT           "Crystal length (mm):",IDC_STATIC,248,21,75,10
+    LTEXT           "Deff (pm/V):",IDC_STATIC,248,35,75,10
+    LTEXT           "Deltak (1/mm):",IDC_STATIC,248,50,65,10
+    LTEXT           "Number of z steps:",IDC_STATIC,248,65,75,10
+    LTEXT           "Distance to detector (mm):",IDC_STATIC,248,81,85,10
+    LTEXT           "Signal",IDC_STATIC_SIGNAL,107,5,23,10
+    LTEXT           "Idler",IDC_STATIC_IDLER,158,5,19,10
+    LTEXT           "Pump",IDC_STATIC_PUMP,204,5,25,10
+    LTEXT           "X",IDC_STATIC_X,355,186,10,10
+    LTEXT           "Y",IDC_STATIC_Y,405,186,10,10
+    LTEXT           "T",IDC_STATIC_T,455,186,10,10
+    LTEXT           "",IDC_HELPBOX,248,231,200,40,WS_BORDER,WS_EX_CLIENTEDGE
+    LTEXT           "Gaussian index order:",IDC_STATIC,5,244,82,10
+    LTEXT           "n2 signal (sq cm/W):",IDC_STATIC,248,96,85,10
+    LTEXT           "n2 idler (sq cm/W):",IDC_STATIC,248,110,75,10
+    LTEXT           "n2 pump (sq cm/W):",IDC_STATIC,248,125,75,10
+    LTEXT           "beta signal (cm/W):",IDC_STATIC,248,140,80,10
+    LTEXT           "beta idler (cm/W):",IDC_STATIC,248,156,85,10
+    LTEXT           "beta pump (cm/W):",IDC_STATIC,248,172,75,10
+    PUSHBUTTON      "Run deltak scan",IDC_RUNDK,405,34,65,14
+    PUSHBUTTON      "Run energy scan",IDC_RUNERG,405,49,65,15
+    PUSHBUTTON      "Run lens scan",IDC_RUNLENS,405,65,65,15
+END
+
+IDD_GRAPHDLG DIALOGEX 0, 0, 509, 321
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Diffractive short-pulse mixing (Version 1)"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    CONTROL         "Signal",IDC_TYPE_SIG,"Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,11,16,35,10
+    CONTROL         "Idler",IDC_TYPE_IDL,"Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,59,16,29,10
+    CONTROL         "Pump",IDC_TYPE_PUM,"Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,98,16,34,10
+    PUSHBUTTON      "Run",IDC_RUNBTN,12,35,40,15
+    PUSHBUTTON      "Fluence",IDC_FLUENCE,55,35,40,15
+    PUSHBUTTON      "Farfield",IDC_FARFIELD,100,35,40,15
+    PUSHBUTTON      "Change Inputs",IDCANCEL,47,180,55,17
+    GROUPBOX        "Display",IDC_STATIC1,5,5,140,70
+    GROUPBOX        "Beams",IDC_STATIC2,5,85,140,80
+    LTEXT           "",IDC_GRAPH_HELP,7,247,240,45,WS_BORDER,WS_EX_CLIENTEDGE
+    GROUPBOX        "Rotate Display",IDC_STATIC_ROT,325,261,175,39
+    PUSHBUTTON      "Up",IDC_UPROT,332,274,26,20
+    PUSHBUTTON      "Down",IDC_DOWNROT,362,274,26,20
+    PUSHBUTTON      "Left",IDC_LEFTROT,392,274,26,20
+    PUSHBUTTON      "Right",IDC_RIGHTROT,422,274,26,20
+    PUSHBUTTON      "Reset",IDC_RESETROT,466,274,30,20
+    PUSHBUTTON      "Movie",IDC_MOVIE,55,55,40,15
+    PUSHBUTTON      "Norm Power",IDC_NORMPOWER,51,205,47,15
+    PUSHBUTTON      "Power",IDC_POWER,5,205,42,15
+    PUSHBUTTON      "Spectra",IDC_SPECTRA,101,205,42,15
+    PUSHBUTTON      "Print",IDC_PRINTBTN,51,225,48,15
+    CONTROL         "Freq",IDC_BEAM_FT,"Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,33,100,40,10
+    CONTROL         "Time",IDC_BEAM_FT2,"Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,83,100,37,10
+    PUSHBUTTON      "M-w",IDC_M_W,12,118,40,15
+    PUSHBUTTON      "Analyze",IDC_ANALYZE,55,118,40,15
+    PUSHBUTTON      "Focus-w",IDC_FOCUS_W,100,118,40,15
+    PUSHBUTTON      "M-p",IDC_M_P,12,139,40,15
+    PUSHBUTTON      "Tilt",IDC_TILT,56,139,40,15
+    PUSHBUTTON      "Focus-p",IDC_FOCUS_P,100,139,40,15
+    CONTROL         "Progress1",IDC_PROGRESS_SLICE,"msctls_progress32",WS_BORDER,7,298,240,7
+    CONTROL         "Progress1",IDC_PROGRESS_TOTAL,"msctls_progress32",WS_BORDER,7,307,240,7
+    PUSHBUTTON      "Load data",IDC_LOADPLOT,100,55,40,15
+    CONTROL         "Progress1",IDC_PROGRESS_SCAN,"msctls_progress32",WS_BORDER,262,307,240,7
+    GROUPBOX        "",IDC_PLOTFRM,167,8,331,197,NOT WS_VISIBLE
+    PUSHBUTTON      "Edit Grpah Properties",IDC_EDITPLOT,420,213,78,20
+END
+
+IDD_DELTAK DIALOG  0, 0, 386, 98
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,329,7,50,14
+    EDITTEXT        IDC_DKINIT,229,7,55,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_DKFINAL,229,22,55,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_NDK,229,36,55,12,ES_AUTOHSCROLL
+    LTEXT           "Initial value of delta_k (1/mm)",IDC_STATIC,7,7,214,10
+    LTEXT           "Final value of delta_k (1/mm)",IDC_STATIC,7,22,214,10
+    LTEXT           "Number of values",IDC_STATIC,7,37,214,10
+END
+
+IDD_ENERGY DIALOG  0, 0, 395, 125
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,338,3,50,14
+    EDITTEXT        IDC_ERGSIG_INIT,169,48,55,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_ERGSIG_FINAL,169,64,55,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_NERG,169,79,55,12,ES_AUTOHSCROLL
+    LTEXT           "Initial pulse energy values  (J)",IDC_STATIC,7,48,151,10
+    LTEXT           "Final pulse energy values (J)",IDC_STATIC,7,64,140,10
+    LTEXT           "Number of energy values",IDC_STATIC,7,79,141,10
+    EDITTEXT        IDC_ERGIDL_INIT,234,48,55,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_ERGIDL_FINAL,234,64,55,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_ERGPUMP_INIT,297,48,55,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_ERGPUMP_FINAL,297,64,55,12,ES_AUTOHSCROLL
+    CTEXT           "Signal",IDC_ERGLBL_S,169,30,54,10
+    CTEXT           "Pump",IDC_ERGLBL_P,297,30,54,10
+    CTEXT           "Idler",IDC_ERGLBL_I,235,31,54,10
+END
+
+IDD_LENSOPT DIALOG  0, 0, 280, 186
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Lens"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,224,7,49,14
+    CONTROL         "",IDC_LENSPICT,"Static",SS_ENHMETAFILE | SS_SUNKEN,7,122,266,57
+    EDITTEXT        IDC_FOCUS,147,39,64,12,ES_AUTOHSCROLL
+    LTEXT           "Focal length (mm)",IDC_STATIC_FOCUS,13,41,133,8
+    LTEXT           "Input beam size (mm)",IDC_STATIC_BEAMDIAM,13,55,133,8
+    LTEXT           "Distance d between lens and crystal (mm)",IDC_STATIC_DIST_I,13,69,133,8
+    EDITTEXT        IDC_BEAMSIZE,147,53,64,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_DISTANCE,147,67,64,12,ES_AUTOHSCROLL
+    LTEXT           "Consider input Gaussian beam. \nExclude zero values.",IDC_STATIC_CAP,7,7,212,19,SS_SUNKEN
+    RADIOBUTTON     "Yes/No",IDC_LENSSCAN,228,46,39,9
+    GROUPBOX        "Lens Parameters",IDC_STATIC0,7,30,212,85
+    GROUPBOX        "Lens Scan",IDC_STATIC,219,30,54,85
+    EDITTEXT        IDC_DISTANCE_F,147,81,64,12,ES_AUTOHSCROLL | NOT WS_VISIBLE
+    LTEXT           "Last value of d (mm)",IDC_STATIC_DIST_F,13,84,133,8,NOT WS_VISIBLE
+    EDITTEXT        IDC_NDIST,147,96,64,12,ES_AUTOHSCROLL | NOT WS_VISIBLE
+    LTEXT           "Number of distance d values",IDC_STATIC_NDIST,13,99,133,8,NOT WS_VISIBLE
+END
+
+IDD_PLOTPROP DIALOGEX 0, 0, 316, 184
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Plot properties editor"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,205,163,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,259,163,50,14
+    CONTROL         "",IDC_PLOTTABS,"SysTabControl32",0x0,7,17,302,135
+END
+
+IDD_PLOTPROPSHT1 DIALOGEX 0, 0, 290, 120
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_VISIBLE | WS_BORDER
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,175,99,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,233,99,50,14
+    CONTROL         "Frame",IDC_FRAME,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,12,100,13
+    CONTROL         "Labels",IDC_LABEL,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,27,30,77,13
+    CONTROL         "Grid (coarse)",IDC_GRID,"Button",BS_AUTO3STATE | WS_TABSTOP,27,46,77,13
+END
+
+IDD_PLOTPROPSHT2 DIALOGEX 0, 0, 290, 120
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_BORDER
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,175,99,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,233,99,50,14
+    CONTROL         "Scatter Plot",IDC_RADIO_MODEL0,"Button",BS_AUTORADIOBUTTON | WS_GROUP,22,28,78,11
+    CONTROL         "Wire Frame",IDC_RADIO_MODEL1,"Button",BS_AUTORADIOBUTTON,22,43,78,11
+    CONTROL         "Surface",IDC_RADIO_MODEL2,"Button",BS_AUTORADIOBUTTON,22,58,78,11
+    GROUPBOX        "Model Type",IDC_MODELTYPE,14,15,94,66
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "FileDescription", "GUI_3D MFC Application"
+            VALUE "FileVersion", "1, 0, 0, 1"
+            VALUE "InternalName", "GUI_3D"
+            VALUE "LegalCopyright", "Copyright (C) 1900"
+            VALUE "OriginalFilename", "GUI_3D.EXE"
+            VALUE "ProductName", "GUI_3D Application"
+            VALUE "ProductVersion", "1, 0, 0, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_PLOT_CTRL           BITMAP                  "res\\plottoolbar.bmp"
+IDB_BITMAP1             BITMAP                  "Res\\viewcon.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_PLOT_CTRL TOOLBAR  16, 16
+BEGIN
+    BUTTON      ID_FITALL
+    BUTTON      ID_SCALERGN
+    BUTTON      ID_ZOOMIN
+    BUTTON      ID_ZOOMOUT
+    BUTTON      ID_ZOOMVERT
+    BUTTON      ID_ZOOMHOR
+    BUTTON      ID_BUTTON32782
+    BUTTON      ID_SELECTBOX
+    BUTTON      ID_ROTATE
+    BUTTON      ID_PAN
+    BUTTON      ID_EDITPLOT
+    BUTTON      ID_SOLID
+    BUTTON      ID_WIRE
+    BUTTON      ID_DOTS
+    BUTTON      ID_FRAME
+    SEPARATOR
+    BUTTON      ID_EDIT2
+    BUTTON      ID_BUTTON32791
+    BUTTON      ID_BUTTON32792
+    BUTTON      ID_BUTTON32795
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_PLOTPROP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 309
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 177
+    END
+
+    IDD_PLOTPROPSHT1, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 283
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 113
+    END
+
+    IDD_PLOTPROPSHT2, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 283
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 113
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDR_MAINFRAME           "Diffractive short-pulse mixing (Version 1)\n\nGUI_3D\n\n\nGUI3D.Document\nGUI_3D Document"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "GUI_3D"
+    AFX_IDS_IDLEMESSAGE     "Ready"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_NEW             "Create a new document\nNew"
+    ID_FILE_OPEN            "Open an existing document\nOpen"
+    ID_FILE_CLOSE           "Close the active document\nClose"
+    ID_FILE_SAVE            "Save the active document\nSave"
+    ID_FILE_SAVE_AS         "Save the active document with a new name\nSave As"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_APP_ABOUT            "Display program information, version number and copyright\nAbout"
+    ID_APP_EXIT             "Quit the application; prompts to save documents\nExit"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_MRU_FILE1       "Open this document"
+    ID_FILE_MRU_FILE2       "Open this document"
+    ID_FILE_MRU_FILE3       "Open this document"
+    ID_FILE_MRU_FILE4       "Open this document"
+    ID_FILE_MRU_FILE5       "Open this document"
+    ID_FILE_MRU_FILE6       "Open this document"
+    ID_FILE_MRU_FILE7       "Open this document"
+    ID_FILE_MRU_FILE8       "Open this document"
+    ID_FILE_MRU_FILE9       "Open this document"
+    ID_FILE_MRU_FILE10      "Open this document"
+    ID_FILE_MRU_FILE11      "Open this document"
+    ID_FILE_MRU_FILE12      "Open this document"
+    ID_FILE_MRU_FILE13      "Open this document"
+    ID_FILE_MRU_FILE14      "Open this document"
+    ID_FILE_MRU_FILE15      "Open this document"
+    ID_FILE_MRU_FILE16      "Open this document"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_NEXT_PANE            "Switch to the next window pane\nNext Pane"
+    ID_PREV_PANE            "Switch back to the previous window pane\nPrevious Pane"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_WINDOW_SPLIT         "Split the active window into panes\nSplit"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_CLEAR           "Erase the selection\nErase"
+    ID_EDIT_CLEAR_ALL       "Erase everything\nErase All"
+    ID_EDIT_COPY            "Copy the selection and put it on the Clipboard\nCopy"
+    ID_EDIT_CUT             "Cut the selection and put it on the Clipboard\nCut"
+    ID_EDIT_FIND            "Find the specified text\nFind"
+    ID_EDIT_PASTE           "Insert Clipboard contents\nPaste"
+    ID_EDIT_REPEAT          "Repeat the last action\nRepeat"
+    ID_EDIT_REPLACE         "Replace specific text with different text\nReplace"
+    ID_EDIT_SELECT_ALL      "Select the entire document\nSelect All"
+    ID_EDIT_UNDO            "Undo the last action\nUndo"
+    ID_EDIT_REDO            "Redo the previously undone action\nRedo"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "Change the window size"
+    AFX_IDS_SCMOVE          "Change the window position"
+    AFX_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    AFX_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    AFX_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    AFX_IDS_SCPREVWINDOW    "Switch to the previous document window"
+    AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "Restore the window to normal size"
+    AFX_IDS_SCTASKLIST      "Activate Task List"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EXTRAS_KVEC          "Runs Mix for different values of delta_k"
+    ID_ZOOMOUT              "Zoom out"
+    ID_ZOOMVERT             "Zoom along vertical"
+    ID_ZOOMHOR              "Zoom along horizontal"
+    ID_ROTATE               "Rotate the view"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_PAN                  "Pan the view"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif
+#include "res\Mix2dsp.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

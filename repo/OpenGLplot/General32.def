@@ -1,0 +1,8 @@
+; General32.def : Deklariert die Modul-Parameter für die DLL.
+
+LIBRARY      "General32"
+
+EXPORTS
+    ; Explicit exports can go here
+
+	LaunchApp

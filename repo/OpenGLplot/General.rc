@@ -1,0 +1,977 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "Resource.h"
+
+// Generated Help ID header file
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "Resource.hm"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+#include <colordlg.h>
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// German (Germany) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_DEU)
+LANGUAGE LANG_GERMAN, SUBLANG_GERMAN
+#pragma code_page(1252)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "Resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "#include <colordlg.h>\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_DEU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 7, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\General.rc2""  // Nicht mit Microsoft Visual C++ bearbeitete Ressourcen\r\n"
+    "#include ""l.deu\\afxres.rc""         // Standardkomponenten\r\n"
+    "#include ""l.deu\\afxprint.rc""       // Ressourcen für Drucken/Seitenansicht\r\n"
+    "#elif !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\General.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#include ""afxprint.rc""       // printing/print preview resources\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // German (Germany) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United States) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "Resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "#include <colordlg.h>\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_DEU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 7, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\General.rc2""  // Nicht mit Microsoft Visual C++ bearbeitete Ressourcen\r\n"
+    "#include ""l.deu\\afxres.rc""         // Standardkomponenten\r\n"
+    "#include ""l.deu\\afxprint.rc""       // Ressourcen für Drucken/Seitenansicht\r\n"
+    "#elif !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\General.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#include ""afxprint.rc""       // printing/print preview resources\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG 0, 0, 265, 45
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About "
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            "",IDC_STATIC_ICON,8,12,21,20
+    LTEXT           "",IDC_STATIC_VERSION,38,11,132,8,SS_NOPREFIX
+    LTEXT           "",IDC_STATIC_COPYRIGHT,38,25,132,8
+    LTEXT           "",IDC_STATIC_URL,182,25,75,8
+    DEFPUSHBUTTON   "OK",IDOK,207,8,50,14,WS_GROUP
+END
+
+IDD_DLG_OPENGL_INFO DIALOGEX 0, 0, 187, 210
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "OpenGL Information"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "GL Library",IDC_STATIC,5,3,177,117,WS_GROUP
+    LTEXT           "Company :",IDC_STATIC,12,16,44,8,0,WS_EX_RIGHT
+    LTEXT           "Not Available",IDC_STATIC_GL_VENDOR,59,16,117,8
+    LTEXT           "Renderer :",IDC_STATIC,12,26,44,8,0,WS_EX_RIGHT
+    LTEXT           "Not Available",IDC_STATIC_GL_RENDERER,59,26,117,8
+    LTEXT           "Version :",IDC_STATIC,12,36,44,8,0,WS_EX_RIGHT
+    LTEXT           "Not Available",IDC_STATIC_GL_VERSION,59,36,117,8
+    LTEXT           "Acceleration :",IDC_STATIC,12,46,44,8,0,WS_EX_RIGHT
+    LTEXT           "Not Available",IDC_STATIC_GL_ACCELERATION,59,46,117,8
+    LTEXT           "Extensions :",IDC_STATIC,12,61,44,8,0,WS_EX_RIGHT
+    EDITTEXT        IDC_EDIT_GL_EXTENSIONS,59,61,117,52,ES_MULTILINE | ES_AUTOHSCROLL | ES_READONLY | WS_VSCROLL | NOT WS_TABSTOP
+    GROUPBOX        "GLU Library",IDC_STATIC,5,125,177,60,WS_GROUP
+    LTEXT           "Version :",IDC_STATIC,12,138,44,8,0,WS_EX_RIGHT
+    LTEXT           "Not Available",IDC_STATIC_GLU_VERSION,59,138,117,8
+    LTEXT           "Extensions :",IDC_STATIC,12,153,44,8,0,WS_EX_RIGHT
+    EDITTEXT        IDC_EDIT_GLU_EXTENSIONS,59,153,117,25,ES_MULTILINE | ES_AUTOHSCROLL | ES_READONLY | WS_VSCROLL | NOT WS_TABSTOP
+    DEFPUSHBUTTON   "Close",IDOK,132,191,50,14,WS_GROUP
+    PUSHBUTTON      "&Details...",IDC_BUTTON_DETAILS,78,191,50,14
+END
+
+IDD_DLG_FILE_PRINT_OPTIONS DIALOGEX 0, 0, 367, 92
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Print Setup"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "&Selection",IDC_STATIC,8,4,135,80,WS_GROUP
+    CONTROL         "Current Graphic Window",IDC_PRINT_VIEW,"Button",BS_AUTORADIOBUTTON | WS_GROUP,18,22,92,10
+    CONTROL         "Current Document",IDC_PRINT_DOC,"Button",BS_AUTORADIOBUTTON,18,42,73,10
+    CONTROL         "Entire Application (Screenshot)",IDC_PRINT_APP,"Button",BS_AUTORADIOBUTTON,18,62,113,10
+    GROUPBOX        "&Options",IDC_STATIC_OPTIONS,151,4,150,80,WS_GROUP,0,HIDC_STATIC_OPTIONS
+    LTEXT           "DIB Upper Bound:",IDC_STATIC_TEXT_F_ONE,161,23,59,8
+    EDITTEXT        IDC_PRINT_MEM,236,21,40,14,ES_AUTOHSCROLL
+    LTEXT           "kB",IDC_STATIC_TEXT_F_TWO,282,23,10,8
+    CONTROL         "Highest Quality\n(Smaller Image)",IDC_PRINT_HIGHEST_QUALITY,
+                    "Button",BS_AUTOCHECKBOX | BS_MULTILINE | WS_TABSTOP,161,36,63,16
+    CONTROL         "Center Image",IDC_PRINT_CENTER,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,161,55,58,10
+    CONTROL         "Background white",IDC_PRINT_BKGND_WHITE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,161,67,73,10
+    PUSHBUTTON      "&Standard",IDC_PRINT_MEM_STANDARD,241,43,50,14
+    PUSHBUTTON      "&Help",IDC_BUTTON_HELP,241,61,50,14
+    DEFPUSHBUTTON   "OK",IDOK,309,8,50,14,WS_GROUP
+    PUSHBUTTON      "Abort",IDCANCEL,309,25,50,14
+    PUSHBUTTON      "&Printer...",IDC_BUTTON_PRINTER,309,43,50,14
+END
+
+IDD_DLG_OPTIONS DIALOG 0, 0, 206, 372
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Options"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "&Mouse",IDC_STATIC,8,4,132,85,WS_GROUP
+    LTEXT           "Left mouse button - Zoom/Rotate",IDC_STATIC,18,20,106,8
+    CONTROL         "Doubleclick/Click",IDC_RADIO_MOUSE_POLICY_0,"Button",BS_AUTORADIOBUTTON | WS_GROUP,18,38,72,10
+    CONTROL         "Click/Click",IDC_RADIO_MOUSE_POLICY_1,"Button",BS_AUTORADIOBUTTON,18,53,50,10
+    CONTROL         "Click+Hold/Drop",IDC_RADIO_MOUSE_POLICY_2,"Button",BS_AUTORADIOBUTTON,18,68,69,10
+    GROUPBOX        "&OpenGL",IDC_STATIC,8,97,132,40,WS_GROUP
+    CONTROL         "No hardware acceleration",IDC_CHECK_NO_HARDWARE_ACCELERATION,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,18,115,97,10
+    GROUPBOX        "&Properties - Scope",IDC_STATIC,8,145,132,40,WS_GROUP
+    CONTROL         "All Windows",IDC_CHECK_PROP_POLICY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,18,163,55,10
+    GROUPBOX        "&Copy Graph",IDC_STATIC,8,193,132,75,WS_GROUP
+    CONTROL         "72",IDC_RADIO_COPY_RESOLUTION_72,"Button",BS_AUTORADIOBUTTON | WS_GROUP,18,211,24,10
+    CONTROL         "75",IDC_RADIO_COPY_RESOLUTION_75,"Button",BS_AUTORADIOBUTTON,56,211,24,10
+    CONTROL         "150",IDC_RADIO_COPY_RESOLUTION_150,"Button",BS_AUTORADIOBUTTON,94,211,28,10
+    CONTROL         "300",IDC_RADIO_COPY_RESOLUTION_300,"Button",BS_AUTORADIOBUTTON,18,226,28,10
+    CONTROL         "600",IDC_RADIO_COPY_RESOLUTION_600,"Button",BS_AUTORADIOBUTTON,56,226,28,10
+    CONTROL         "andere",IDC_RADIO_COPY_RESOLUTION_OTHER,"Button",BS_AUTORADIOBUTTON,94,226,38,10
+    LTEXT           "Resolution",IDC_STATIC,18,246,34,8
+    EDITTEXT        IDC_EDIT_COPY_RESOLUTION,67,244,40,14,ES_AUTOHSCROLL
+    LTEXT           "DPI",IDC_STATIC,115,246,13,8
+    GROUPBOX        "&Recent File",IDC_STATIC_REOPEN_GBOX,8,276,132,40,WS_GROUP
+    CONTROL         "Open automatically",IDC_CHECK_REOPEN_POLICY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,18,294,76,10
+    GROUPBOX        "&Save with Result - Number of Bytes",IDC_STATIC_SERIALZE_RESULT_BYTES_GBOX,8,324,132,40,WS_GROUP
+    CONTROL         "1",IDC_RADIO_SERIALZE_RESULT_BYTES_1,"Button",BS_AUTORADIOBUTTON | WS_GROUP,19,342,20,10
+    CONTROL         "2",IDC_RADIO_SERIALZE_RESULT_BYTES_2,"Button",BS_AUTORADIOBUTTON,49,342,20,10
+    CONTROL         "4",IDC_RADIO_SERIALZE_RESULT_BYTES_4,"Button",BS_AUTORADIOBUTTON,79,342,20,10
+    CONTROL         "8",IDC_RADIO_SERIALZE_RESULT_BYTES_8,"Button",BS_AUTORADIOBUTTON,109,342,20,10
+    DEFPUSHBUTTON   "OK",IDOK,148,8,50,14,WS_GROUP
+    PUSHBUTTON      "Abort",IDCANCEL,148,25,50,14
+    PUSHBUTTON      "S&hortcuts...",IDC_BUTTON_SHORTCUTS,148,42,50,14
+END
+
+IDD_DLG_LIST_CTRL DIALOG 0, 0, 186, 118
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "Close",IDOK,128,96,50,14,WS_GROUP
+    CONTROL         "List2",IDC_LIST_CTRL,"SysListView32",LVS_REPORT | LVS_SHOWSELALWAYS | LVS_OWNERDRAWFIXED | LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP,8,8,170,80
+END
+
+IDD_DLG_COLOR_BASIC DIALOG 2, 0, 298, 66
+STYLE DS_SETFONT | DS_MODALFRAME | DS_3DLOOK | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Color"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    LTEXT           "&Basic colors:",-1,4,4,140,9
+    CONTROL         "",COLOR_CUSTOM1,"Static",SS_SIMPLE | WS_GROUP | WS_TABSTOP,4,14,140,28
+    DEFPUSHBUTTON   "OK",IDOK,4,48,44,14,WS_GROUP
+    PUSHBUTTON      "Cancel",IDCANCEL,52,48,44,14,WS_GROUP
+    PUSHBUTTON      "&Help",1038,100,48,44,14,WS_GROUP
+    LTEXT           "&Custom colors:",-1,4,64,140,9,NOT WS_VISIBLE
+    CONTROL         "",COLOR_BOX1,"Static",SS_SIMPLE | NOT WS_VISIBLE | WS_DISABLED | WS_GROUP,4,74,140,86
+    PUSHBUTTON      "&Define Custom Colors >>",COLOR_MIX,4,166,140,14,WS_GROUP
+    CONTROL         "",COLOR_RAINBOW,"Static",SS_SIMPLE | SS_SUNKEN,152,4,118,116
+    CONTROL         "",COLOR_LUMSCROLL,"Static",SS_SIMPLE | SS_SUNKEN,280,4,8,116
+    CONTROL         "",COLOR_CURRENT,"Static",SS_SIMPLE | SS_SUNKEN,152,124,40,26
+    PUSHBUTTON      "&o",COLOR_SOLID,300,200,4,14,WS_GROUP
+    RTEXT           "Color",COLOR_SOLID_LEFT,152,151,20,9
+    LTEXT           "|S&olid",COLOR_SOLID_RIGHT,172,151,20,9
+    RTEXT           "Hu&e:",COLOR_HUEACCEL,194,126,20,9
+    EDITTEXT        COLOR_HUE,216,124,18,12,WS_GROUP
+    RTEXT           "&Sat:",COLOR_SATACCEL,194,140,20,9
+    EDITTEXT        COLOR_SAT,216,138,18,12,WS_GROUP
+    RTEXT           "&Lum:",COLOR_LUMACCEL,194,154,20,9
+    EDITTEXT        COLOR_LUM,216,152,18,12,WS_GROUP
+    RTEXT           "&Red:",COLOR_REDACCEL,243,126,24,9
+    EDITTEXT        COLOR_RED,269,124,18,12,WS_GROUP
+    RTEXT           "&Green:",COLOR_GREENACCEL,243,140,24,9
+    EDITTEXT        COLOR_GREEN,269,138,18,12,WS_GROUP
+    RTEXT           "Bl&ue:",COLOR_BLUEACCEL,243,154,24,9
+    EDITTEXT        COLOR_BLUE,269,152,18,12,WS_GROUP
+    PUSHBUTTON      "&Add to Custom Colors",COLOR_ADD,152,166,142,14,WS_GROUP
+END
+
+IDD_DLG_PROPERTIES DIALOG 0, 0, 229, 326
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Properties"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "&Scaling",IDC_STATIC,5,3,105,97,WS_GROUP
+    CONTROL         "Link Sliders",IDC_CHECK_LINK_SCALE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,15,19,52,10
+    LTEXT           "X",IDC_STATIC,15,42,10,10
+    CONTROL         "Slider1",IDC_SLIDER_SCALE_X,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,22,34,85,15
+    LTEXT           "Y",IDC_STATIC,15,63,10,10
+    CONTROL         "Slider1",IDC_SLIDER_SCALE_Y,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,22,54,85,15
+    LTEXT           "Z",IDC_STATIC_SCALE_Z,15,84,10,10
+    CONTROL         "Slider1",IDC_SLIDER_SCALE_Z,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,22,74,85,15
+    GROUPBOX        "&Moving",IDC_STATIC,5,105,105,97,WS_GROUP
+    CONTROL         "Link Sliders",IDC_CHECK_LINK_TRANSLATION,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,15,121,52,10
+    LTEXT           "X",IDC_STATIC,15,144,10,10
+    CONTROL         "Slider1",IDC_SLIDER_TRANSLATION_X,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,22,136,85,15
+    LTEXT           "Y",IDC_STATIC,15,165,10,10
+    CONTROL         "Slider1",IDC_SLIDER_TRANSLATION_Y,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,22,156,85,15
+    LTEXT           "Z",IDC_STATIC_TRANSLATION_Z,15,186,10,10
+    CONTROL         "Slider1",IDC_SLIDER_TRANSLATION_Z,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,22,176,85,15
+    GROUPBOX        "&Coordinates",IDC_STATIC_SCALE_GBOX,5,207,105,95,WS_GROUP
+    CONTROL         "Frame",IDC_CHECK_SCALE_SHOW_FRAME,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,15,223,35,10
+    CONTROL         "Label",IDC_CHECK_SCALE_SHOW_LABELS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,27,238,33,10
+    CHECKBOX        "Grid (coarse/fine)",IDC_CHECK_SCALE_SHOW_GRID,27,253,71,10
+    CONTROL         "Axis",IDC_CHECK_SCALE_SHOW_AXIS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,15,268,29,10
+    CONTROL         "Label",IDC_CHECK_SCALE_SHOW_AXIS_LABELS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,27,283,33,10
+    GROUPBOX        "&OpenGL",IDC_STATIC,119,3,105,165,WS_GROUP
+    CONTROL         "Rainbow Colors",IDC_RADIO_RAINBOW,"Button",BS_AUTORADIOBUTTON | WS_GROUP,129,19,65,10
+    CONTROL         "Monochrome",IDC_RADIO_MONOCHROME,"Button",BS_AUTORADIOBUTTON,129,34,57,10
+    CONTROL         "Contour Smoothing",IDC_CHECK_ANTIALIAS,"Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,129,54,76,10
+    CONTROL         "Color Smoothing",IDC_CHECK_SMOOTH,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,129,69,75,10
+    CONTROL         "Lighting",IDC_CHECK_LIGHTING,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,129,84,75,10
+    CONTROL         "Foreground Only",IDC_CHECK_REMOVE_HIDDEN,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,129,99,75,10
+    CONTROL         "Scatter Plot",IDC_RADIO_MODEL_0,"Button",BS_AUTORADIOBUTTON | WS_GROUP,129,119,70,10
+    CONTROL         "Wire Frame",IDC_RADIO_MODEL_1,"Button",BS_AUTORADIOBUTTON,129,134,70,10
+    CONTROL         "Surface",IDC_RADIO_MODEL_2,"Button",BS_AUTORADIOBUTTON,129,149,70,10
+    GROUPBOX        "Colo&rs",IDC_STATIC,119,173,105,89,WS_GROUP
+    LTEXT           "Font/Lines",IDC_STATIC,129,189,35,8
+    LTEXT           "",IDC_FRAME_COLOR_FONT,177,189,40,10,SS_NOTIFY | WS_BORDER | NOT WS_GROUP | WS_TABSTOP
+    LTEXT           "Foreground",IDC_STATIC_FORE_TEXT,129,207,37,8
+    LTEXT           "",IDC_FRAME_COLOR_FORE,177,207,40,10,SS_NOTIFY | WS_BORDER | NOT WS_GROUP | WS_TABSTOP
+    LTEXT           "Background",IDC_STATIC,129,225,40,10
+    LTEXT           "",IDC_FRAME_COLOR_BACK,177,225,40,10,SS_NOTIFY | WS_BORDER | NOT WS_GROUP | WS_TABSTOP
+    LTEXT           "Light",IDC_STATIC_LIGHT_TEXT,129,243,20,10
+    LTEXT           "",IDC_FRAME_COLOR_LIGHT_AMBIENT,177,243,10,10,SS_NOTIFY | WS_BORDER | NOT WS_GROUP | WS_TABSTOP
+    LTEXT           "",IDC_FRAME_COLOR_LIGHT_DIFFUSE,192,243,10,10,SS_NOTIFY | WS_BORDER | NOT WS_GROUP | WS_TABSTOP
+    LTEXT           "",IDC_FRAME_COLOR_LIGHT_SPECULAR,207,243,10,10,SS_NOTIFY | WS_BORDER | NOT WS_GROUP | WS_TABSTOP
+    GROUPBOX        "&Animation",IDC_STATIC_VROTATION_GBOX,119,267,105,35,WS_GROUP
+    CONTROL         "Rotate",IDC_CHECK_VROTATION,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,129,283,80,10
+    PUSHBUTTON      "Font...",IDC_EDIT_FONT,120,307,50,14,WS_GROUP
+    PUSHBUTTON      "Close",IDOK,174,307,50,14
+END
+
+IDD_FORM_PROPERTIES DIALOGEX 0, 0, 115, 652
+STYLE DS_SETFONT | WS_CHILD
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    GROUPBOX        "&Scaling",IDC_STATIC,5,3,105,95,WS_GROUP
+    CONTROL         "Link Sliders",IDC_CHECK_LINK_SCALE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,15,18,52,10
+    LTEXT           "X",IDC_STATIC,15,36,10,10
+    CONTROL         "Slider1",IDC_SLIDER_SCALE_X,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,22,33,85,15
+    LTEXT           "Y",IDC_STATIC,15,56,10,10
+    CONTROL         "Slider1",IDC_SLIDER_SCALE_Y,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,22,53,85,15
+    LTEXT           "Z",IDC_STATIC_SCALE_Z,15,76,10,10
+    CONTROL         "Slider1",IDC_SLIDER_SCALE_Z,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,22,73,85,15
+    GROUPBOX        "&Moving",IDC_STATIC,5,103,105,95,WS_GROUP
+    CONTROL         "Link Sliders",IDC_CHECK_LINK_TRANSLATION,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,15,118,52,10
+    LTEXT           "X",IDC_STATIC,15,136,10,10
+    CONTROL         "Slider1",IDC_SLIDER_TRANSLATION_X,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,22,133,85,15
+    LTEXT           "Y",IDC_STATIC,15,156,10,10
+    CONTROL         "Slider1",IDC_SLIDER_TRANSLATION_Y,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,22,153,85,15
+    LTEXT           "Z",IDC_STATIC_TRANSLATION_Z,15,176,10,10
+    CONTROL         "Slider1",IDC_SLIDER_TRANSLATION_Z,"msctls_trackbar32",TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,22,173,85,15
+    GROUPBOX        "&Coordinates",IDC_STATIC_SCALE_GBOX,5,203,105,95,WS_GROUP
+    CONTROL         "Frame",IDC_CHECK_SCALE_SHOW_FRAME,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,15,218,35,10
+    CONTROL         "Label",IDC_CHECK_SCALE_SHOW_LABELS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,27,233,33,10
+    CHECKBOX        "Grid (coarse/fine)",IDC_CHECK_SCALE_SHOW_GRID,27,248,71,10
+    CONTROL         "Axis",IDC_CHECK_SCALE_SHOW_AXIS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,15,263,29,10
+    CONTROL         "Label",IDC_CHECK_SCALE_SHOW_AXIS_LABELS,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,27,278,33,10
+    GROUPBOX        "&OpenGL",IDC_STATIC,5,303,105,165,WS_GROUP
+    CONTROL         "Rainbow Colors",IDC_RADIO_RAINBOW,"Button",BS_AUTORADIOBUTTON | WS_GROUP,15,318,65,10
+    CONTROL         "Monochrome",IDC_RADIO_MONOCHROME,"Button",BS_AUTORADIOBUTTON,15,333,57,10
+    CONTROL         "Contour Smoothing",IDC_CHECK_ANTIALIAS,"Button",BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,15,353,76,10
+    CONTROL         "Color Smoothing",IDC_CHECK_SMOOTH,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,15,368,75,10
+    CONTROL         "Lighting",IDC_CHECK_LIGHTING,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,15,383,75,10
+    CONTROL         "Foreground Only",IDC_CHECK_REMOVE_HIDDEN,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,15,398,75,10
+    CONTROL         "Scatter Plot",IDC_RADIO_MODEL_0,"Button",BS_AUTORADIOBUTTON | WS_GROUP,15,418,70,10
+    CONTROL         "Wire Frame",IDC_RADIO_MODEL_1,"Button",BS_AUTORADIOBUTTON,15,433,70,10
+    CONTROL         "Surface",IDC_RADIO_MODEL_2,"Button",BS_AUTORADIOBUTTON,15,448,70,10
+    GROUPBOX        "Colo&rs",IDC_STATIC,5,473,105,89,WS_GROUP
+    LTEXT           "Font/Lines",IDC_STATIC,15,489,35,8
+    LTEXT           "",IDC_FRAME_COLOR_FONT,63,489,40,10,SS_NOTIFY | WS_BORDER | NOT WS_GROUP | WS_TABSTOP
+    LTEXT           "Foreground",IDC_STATIC_FORE_TEXT,15,507,37,8
+    LTEXT           "",IDC_FRAME_COLOR_FORE,63,507,40,10,SS_NOTIFY | WS_BORDER | NOT WS_GROUP | WS_TABSTOP
+    LTEXT           "Background",IDC_STATIC,15,525,40,10
+    LTEXT           "",IDC_FRAME_COLOR_BACK,63,525,40,10,SS_NOTIFY | WS_BORDER | NOT WS_GROUP | WS_TABSTOP
+    LTEXT           "Light",IDC_STATIC_LIGHT_TEXT,15,543,20,10
+    LTEXT           "",IDC_FRAME_COLOR_LIGHT_AMBIENT,63,543,10,10,SS_NOTIFY | WS_BORDER | NOT WS_GROUP | WS_TABSTOP
+    LTEXT           "",IDC_FRAME_COLOR_LIGHT_DIFFUSE,78,543,10,10,SS_NOTIFY | WS_BORDER | NOT WS_GROUP | WS_TABSTOP
+    LTEXT           "",IDC_FRAME_COLOR_LIGHT_SPECULAR,93,543,10,10,SS_NOTIFY | WS_BORDER | NOT WS_GROUP | WS_TABSTOP
+    GROUPBOX        "&Animation",IDC_STATIC_VROTATION_GBOX,5,567,105,35,WS_GROUP
+    CONTROL         "Rotate",IDC_CHECK_VROTATION,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,15,582,80,10
+    GROUPBOX        "&Text",IDC_STATIC,5,607,105,40,WS_GROUP
+    PUSHBUTTON      "Font...",IDC_EDIT_FONT,15,621,85,14,WS_GROUP
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 3,12,71,104
+ PRODUCTVERSION 3,12,71,104
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "written by Uwe Kotyczka\r\n\r\nuwe.kotyczka@web.de"
+            VALUE "FileDescription", "General DLL"
+            VALUE "FileVersion", "3.012.71.104"
+            VALUE "InternalName", "General32"
+            VALUE "LegalCopyright", "Copyright ©  1998 - 2010"
+            VALUE "OriginalFilename", "General32.dll"
+            VALUE "ProductName", "General Dynamic Link Library"
+            VALUE "ProductVersion", "3.012.71.104"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 8
+        RIGHTMARGIN, 257
+        TOPMARGIN, 8
+        BOTTOMMARGIN, 37
+    END
+
+    IDD_DLG_OPENGL_INFO, DIALOG
+    BEGIN
+        LEFTMARGIN, 5
+        RIGHTMARGIN, 182
+        TOPMARGIN, 3
+        BOTTOMMARGIN, 205
+    END
+
+    IDD_DLG_FILE_PRINT_OPTIONS, DIALOG
+    BEGIN
+        LEFTMARGIN, 8
+        RIGHTMARGIN, 359
+        TOPMARGIN, 4
+        BOTTOMMARGIN, 84
+    END
+
+    IDD_DLG_OPTIONS, DIALOG
+    BEGIN
+        LEFTMARGIN, 8
+        RIGHTMARGIN, 198
+        TOPMARGIN, 4
+        BOTTOMMARGIN, 364
+    END
+
+    IDD_DLG_LIST_CTRL, DIALOG
+    BEGIN
+        LEFTMARGIN, 8
+        RIGHTMARGIN, 178
+        TOPMARGIN, 8
+        BOTTOMMARGIN, 110
+    END
+
+    IDD_DLG_PROPERTIES, DIALOG
+    BEGIN
+        LEFTMARGIN, 5
+        RIGHTMARGIN, 224
+        TOPMARGIN, 3
+        BOTTOMMARGIN, 321
+    END
+
+    IDD_FORM_PROPERTIES, DIALOG
+    BEGIN
+        LEFTMARGIN, 5
+        RIGHTMARGIN, 110
+        TOPMARGIN, 3
+        BOTTOMMARGIN, 647
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_CURSOR_HAND         CURSOR                  "res\\CursorHand.cur"
+
+IDC_CURSOR_DBL_CROSS    CURSOR                  "res\\CursorDblCross.cur"
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AFX_DIALOG_LAYOUT
+//
+
+IDD_FORM_PROPERTIES AFX_DIALOG_LAYOUT
+BEGIN
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_INTEGER_LESS        "Please enter an integer less %d."
+    IDS_INTEGER_LESS_EQUAL  "Please enter an integer less or equal %d."
+    IDS_INTEGER_GREATER     "Please enter an integer greater %d."
+    IDS_INTEGER_GREATER_EQUAL "Please enter an integer greater or equal %d."
+    IDS_INTEGER_GREATER_LESS 
+                            "Please enter an integer proper between %d and %d."
+    IDS_INTEGER_GREATER_EQUAL_LESS 
+                            "Please enter an integer greater or equal %d and less %d."
+    IDS_INTEGER_GREATER_LESS_EQUAL 
+                            "Please enter an integer greater %d and less or equal %d."
+    IDS_INTEGER_NOT_EQUAL   "Please enter an integer not equal %d."
+    IDS_INTEGER_LESS_GREATER "Please enter an integer less %d or greater %d."
+    IDS_INTEGER_LESS_GREATER_EQUAL 
+                            "Please enter an integer less %d or greater or equal %d."
+    IDS_INTEGER_LESS_EQUAL_GREATER 
+                            "Please enter an integer less or equal %d or greater %d."
+    IDS_INTEGER_LESS_EQUAL_GREATER_EQUAL 
+                            "Please enter an integer less or equal %d or greater or equal %d."
+    IDS_NUMBER_LESS         "Please enter a number less %g."
+    IDS_NUMBER_LESS_EQUAL   "Please enter a number less or equal %g."
+    IDS_NUMBER_GREATER      "Please enter a number greater %g."
+END
+
+STRINGTABLE
+BEGIN
+    IDS_NUMBER_GREATER_EQUAL "Please enter a number greater or equal %g."
+    IDS_NUMBER_GREATER_LESS "Please enter a number proper between %g and %g."
+    IDS_NUMBER_GREATER_EQUAL_LESS 
+                            "Please enter a number greater or equal %g and less %g."
+    IDS_NUMBER_GREATER_LESS_EQUAL 
+                            "Please enter a number greater %g and less or equal %g."
+    IDS_NUMBER_NOT_EQUAL    "Please enter a number not equal %g."
+    IDS_NUMBER_LESS_GREATER "Please enter a number less %g or greater %g."
+    IDS_NUMBER_LESS_GREATER_EQUAL 
+                            "Please enter a number less %g or greater or equal %g."
+    IDS_NUMBER_LESS_EQUAL_GREATER 
+                            "Please enter a number less or equal %g or greater %g."
+    IDS_NUMBER_LESS_EQUAL_GREATER_EQUAL 
+                            "Please enter a number less or equal %g or greater or equal %g."
+    IDS_SETTINGCHANGE_LPARAM_FORCE "Unconditionally forced by CGlWinApp"
+    IDS_FOREGROUND_ONLY     "Foreground Only"
+    IDS_BLACK_LINES         "Black Lines"
+    IDS_GRID_NONE           "Grid (coarse/fine)"
+    IDS_GRID_COARSE         "Grid (coarse)"
+    IDS_GRID_FINE           "Grid (fine)"
+    IDS_TOOLBAR_STD         "Standard"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_TOOLBAR_EX          "Task"
+    IDS_DATA_MAX_LIGHTS     "Maximum number of lights"
+    IDS_DATA_MAX_CLIP_PLANES 
+                            "Maximum number of application-defined clipping planes"
+    IDS_DATA_MAX_MODEL_STACK_DEPTH 
+                            "Maximum supported depth of the modelview matrix stack"
+    IDS_DATA_MAX_PROJ_STACK_DEPTH 
+                            "Maximum supported depth of the projection matrix stack"
+    IDS_DATA_MAX_TEX_STACK_DEPTH 
+                            "Maximum supported depth of the texture matrix stack"
+    IDS_DATA_MAX_NAME_STACK_DEPTH 
+                            "Maximum supported depth of the selection name stack"
+    IDS_DATA_MAX_ATTR_STACK_DEPTH 
+                            "Maximum supported depth of the attribute stack"
+    IDS_DATA_MAX_TEX_SIZE   "Maximum width or height of any texture image"
+    IDS_DATA_MAX_LIST_NESTING 
+                            "Maximum recursion depth allowed during display-list traversal"
+    IDS_DATA_MAX_EVAL_ORDER "Maximum equation order supported by 1-D and 2-D evaluators"
+    IDS_DATA_MAX_VIEWPORT_DIMS 
+                            "Maximum supported width and height of the viewport"
+    IDS_DATA_AUX_BUF        "Number of auxiliary color buffers"
+    IDS_DATA_SMOOTH_POINT_SIZE "Supported sizes for antialiased points"
+    IDS_DATA_SMOOTH_POINT_GRAN 
+                            "Size difference between adjacent supported sizes for antialiased points"
+    IDS_DATA_SMOOTH_LINE_SIZE "Supported widths for antialiased lines"
+END
+
+STRINGTABLE
+BEGIN
+    ID_VIEW_TOOLBAR_EX      "Show or hide the task toolbar\nToggle Task ToolBar"
+    ID_INDICATOR_TIME       "88:88"
+    ID_HELP_CONTENTS        "Display Help topics\nHelp Topics"
+    ID_HELP_OPENGL_INFO     "Display OpenGL information\nOpenGL Info"
+    ID_HELP_SHORTCUTS       "Display available keybord shortcuts\nShortcuts"
+    ID_FILE_PRINT_EX        "Print the active view/document/application\nPrint"
+    ID_FILE_PRINT_PREVIEW_EX "Display full pages\nPrint Preview"
+    ID_FILE_PRINT_SETUP_EX  "Change the printer and printing options\nPrint Setup"
+    ID_EDIT_COPY_EMF        "Copy the selection and put it as ""Enhanced Metafile"" on the Clipboard\nCopy (EMF)"
+    ID_EDIT_PASTE_EMF       "Insert Clipboard contents, if it is present as ""Enhanced Metafile""\nPaste (EMF)"
+    ID_EDIT_EXPORT_PS       "Copy the selection and export it to PostScript file\nExport PostScript"
+    ID_EDIT_PROPERTIES      "Show the view's properties\nProperties"
+    ID_EDIT_FONT            "Select font for current view\nFont"
+END
+
+STRINGTABLE
+BEGIN
+    ID_EDIT_OPTIONS         "Sets Options\nOptions"
+    ID_CHANGE_MOUSE_POLICY  "Toggle the handling of the left mouse button\nLeft Mouse Button"
+    ID_CHANGE_HARDWARE_ACCELERATION 
+                            "Toggle hardware acceleration on/off\nHardware Acceleration"
+    ID_CHANGE_PROP_POLICY   "Toggle the scope of the properties (current window/all windows)\nProperties"
+    ID_CHANGE_REOPEN_POLICY "Toggle automatically opening of the recent file on/off\nOpen automatically"
+    ID_SERIALIZE_RESULT_ONE_BYTE 
+                            """Save with calculation result"" stores graph data of the result with minimum precision (1 byte)\nSave with 1 Byte"
+    ID_SERIALIZE_RESULT_TWO_BYTE 
+                            """Save with calculation result"" stores graph data of the result with low precision (2 bytes)\nSave with 2 Bytes"
+    ID_SERIALIZE_RESULT_FOUR_BYTE 
+                            """Save with calculation result"" stores graph data of the result with normal precision (4 bytes)\nSave with 4 Bytes"
+    ID_SERIALIZE_RESULT_EIGHT_BYTE 
+                            """Save with calculation result"" stores graph data of the result with high precision (8 bytes)\nSave with 8 Bytes"
+    ID_CLEAR_VIEWS          "Clear all views of the active document and close unnecessary windows\nClear Views"
+    ID_CLOSE_ALL_DOCS       "Close all documents\nClose Documents"
+    ID_RESTORE_DEFAULT_VALUES "Restore the default values\nRestore Default"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_IDLEMESSAGE     "Ready"
+END
+
+STRINGTABLE
+BEGIN
+    ID_FILE_NEW             "Create a new document\nNew"
+    ID_FILE_OPEN            "Open an existing document\nOpen"
+    ID_FILE_CLOSE           "Close the active document\nClose"
+    ID_FILE_SAVE            "Save the active document\nSave"
+    ID_FILE_SAVE_AS         "Save the active document with a new name\nSave As"
+    ID_FILE_PAGE_SETUP      "Change the printing options\nPage Setup"
+    ID_FILE_PRINT_SETUP     "Change the printer and printing options\nPrint Setup"
+    ID_FILE_PRINT           "Print the active document\nPrint"
+END
+
+STRINGTABLE
+BEGIN
+    ID_FILE_MRU_FILE1       "Open this document"
+    ID_FILE_MRU_FILE2       "Open this document"
+    ID_FILE_MRU_FILE3       "Open this document"
+    ID_FILE_MRU_FILE4       "Open this document"
+    ID_FILE_MRU_FILE5       "Open this document"
+    ID_FILE_MRU_FILE6       "Open this document"
+    ID_FILE_MRU_FILE7       "Open this document"
+    ID_FILE_MRU_FILE8       "Open this document"
+    ID_FILE_MRU_FILE9       "Open this document"
+    ID_FILE_MRU_FILE10      "Open this document"
+    ID_FILE_MRU_FILE11      "Open this document"
+    ID_FILE_MRU_FILE12      "Open this document"
+    ID_FILE_MRU_FILE13      "Open this document"
+    ID_FILE_MRU_FILE14      "Open this document"
+    ID_FILE_MRU_FILE15      "Open this document"
+    ID_FILE_MRU_FILE16      "Open this document"
+END
+
+STRINGTABLE
+BEGIN
+    ID_EDIT_CLEAR           "Erase the selection\nErase"
+    ID_EDIT_CLEAR_ALL       "Erase everything\nErase All"
+    ID_EDIT_COPY            "Copy the selection and put it on the Clipboard\nCopy"
+    ID_EDIT_CUT             "Cut the selection and put it on the Clipboard\nCut"
+    ID_EDIT_FIND            "Find the specified text\nFind"
+    ID_EDIT_PASTE           "Insert Clipboard contents\nPaste"
+    ID_EDIT_REPEAT          "Repeat the last action\nRepeat"
+    ID_EDIT_REPLACE         "Replace specific text with different text\nReplace"
+    ID_EDIT_SELECT_ALL      "Select the entire document\nSelect All"
+    ID_EDIT_UNDO            "Undo the last action\nUndo"
+    ID_EDIT_REDO            "Redo the previously undone action\nRedo"
+END
+
+STRINGTABLE
+BEGIN
+    ID_WINDOW_NEW           "Open another window for the active document\nNew Window"
+    ID_WINDOW_ARRANGE       "Arrange icons at the bottom of the window\nArrange Icons"
+    ID_WINDOW_CASCADE       "Arrange windows so they overlap\nCascade Windows"
+    ID_WINDOW_TILE_HORZ     "Arrange windows as non-overlapping tiles\nTile Windows"
+    ID_WINDOW_TILE_VERT     "Arrange windows as non-overlapping tiles\nTile Windows"
+END
+
+STRINGTABLE
+BEGIN
+    ID_APP_ABOUT            "Display program information, version number and copyright\nAbout"
+    ID_APP_EXIT             "Quit the application; prompts to save documents\nExit"
+END
+
+STRINGTABLE
+BEGIN
+    ID_NEXT_PANE            "Switch to the next window pane\nNext Pane"
+    ID_PREV_PANE            "Switch back to the previous window pane\nPrevious Pane"
+END
+
+STRINGTABLE
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE
+BEGIN
+    ID_VIEW_TOOLBAR         "Show or hide the standard toolbar\nToggle Standard ToolBar"
+    ID_VIEW_STATUS_BAR      "Show or hide the status bar\nToggle StatusBar"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_SCSIZE          "Change the window size"
+    AFX_IDS_SCMOVE          "Change the window position"
+    AFX_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    AFX_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    AFX_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    AFX_IDS_SCPREVWINDOW    "Switch to the previous document window"
+    AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_SCRESTORE       "Restore the window to normal size"
+    AFX_IDS_SCTASKLIST      "Activate Task List"
+    AFX_IDS_MDICHILD        "Activate this window"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_PREVIEW_CLOSE   "Close print preview mode\nCancel Preview"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_DATA_SMOOTH_LINE_GRAN 
+                            "Width difference between adjacent supported widths for antialiased lines"
+    IDS_DATA_COLOR_BITS     "Color buffer"
+    IDS_DATA_DEPTH_BITS     "Depth buffer"
+    IDS_DATA_STENCIL_BITS   "Stencil buffer"
+    IDS_FORMAT_COLOR_BITS   "%d Bit red, %d Bit green, %d Bit blue, %d Bit alpha"
+    IDS_DETAIL_OGL_INFO_TITLE "OpenGL Information - Details"
+    IDS_DETAIL_SHORTCUTS_TITLE "Shortcuts"
+    IDS_STR_SHIFT           "Shift"
+    IDS_STR_ALT             "Alt"
+    IDS_STR_CTRL            "Ctrl"
+    IDS_STR_IDENT           "Identifier"
+    IDS_STR_VAL             "Value"
+    IDS_STR_SHORTCUT        "Shortcut"
+    IDS_STR_STAT            "Statement"
+    IDS_STR_DESC            "Description"
+    IDS_STR_ACCEL_ICD       "Fully accelerated (ICD)"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_STR_ACCEL_MCD       "Partially accelerated (MCD)"
+    IDS_STR_ACCEL_SOFTWARE  "Not accelerated (Software)"
+    IDS_STR_NOT_AVAIL       "Not Available"
+    IDS_PROP_NO_MORE_ZOOM   "Zoom: Maximal possible resolution reached, further zooming not possible."
+    IDS_PROP_MOUSE_DBLCLK_CLK "Left mouse button: Doubleclick/Click"
+    IDS_PROP_MOUSE_CLK_CLK  "Left mouse button: Click/Click"
+    IDS_PROP_MOUSE_CLK_DROP "Left mouse button: Click+Hold/Drop"
+    IDS_PROP_ACCEL_PERMIT   "Hardware acceleration permitted"
+    IDS_PROP_ACCEL_NO       "No hardware acceleration"
+    IDS_PROP_WND_CUR        "Properties for current window"
+    IDS_PROP_WND_ALL        "Properties for all windows"
+    IDS_PROP_RECENT_NO      "With restart the recent file list is not considered"
+    IDS_PROP_RECENT_YES     "With restart the first document of the recent file list is opened"
+    IDS_PROP_SAVE_ONE       """Save with calculation result"" stores graph data of the result with minimum precision (1 byte)."
+    IDS_PROP_SAVE_TWO       """Save with calculation result"" stores graph data of the result with low precision (2 bytes)."
+    IDS_PROP_SAVE_FOUR      """Save with calculation result"" stores graph data of the result with normal precision (4 bytes)."
+END
+
+STRINGTABLE
+BEGIN
+    IDS_PROP_SAVE_EIGHT     """Save with calculation result"" stores graph data of the result with high precision (8 bytes)."
+    IDS_CHANGED_RESOLUTION  "Resolution of the clipboard copy reduced to %d DPI."
+    IDS_ERROR_PRINTER_NO_SUPPORT_MSG 
+                            "Printer %s%s%sdoes not support required functions."
+    IDS_ERROR_PRINTER_INSUF_MEM "Could not print.\nNot enough memory."
+    IDS_ERROR_PRINTER_NO_START "Could not start print job."
+    IDS_ERROR_HYPER_INSUF_MEM 
+                            "The operating system is out\nof memory or resources."
+    IDS_ERROR_HYPER_PNF     "The specified path was not found."
+    IDS_ERROR_HYPER_FNF     "The specified file was not found."
+    IDS_ERROR_HYPER_BAD_FORMAT 
+                            "The .EXE file is invalid\n(non-Win32 .EXE or error in .EXE image)."
+    IDS_ERROR_HYPER_ACCESSDENIED 
+                            "The operating system denied\naccess to the specified file."
+    IDS_ERROR_HYPER_ASSOCINCOMPLETE 
+                            "The filename association is\nincomplete or invalid."
+    IDS_ERROR_HYPER_DDEBUSY "The DDE transaction could not\nbe completed because other DDE transactions\nwere being processed."
+    IDS_ERROR_HYPER_DDEFAIL "The DDE transaction failed."
+    IDS_ERROR_HYPER_DDETIMEOUT 
+                            "The DDE transaction could not\nbe completed because the request timed out."
+    IDS_ERROR_HYPER_DLLNOTFOUND 
+                            "The specified dynamic-link library was not found."
+    IDS_ERROR_HYPER_NOASSOC "There is no application associated\nwith the given filename extension."
+END
+
+STRINGTABLE
+BEGIN
+    IDS_ERROR_HYPER_OOM     "There was not enough memory to complete the operation."
+    IDS_ERROR_HYPER_SHARE   "A sharing violation occurred."
+    IDS_ERROR_HYPER_UNKNOWN "Unknown Error (%d) occurred."
+    IDS_ERROR_HYPER_MSG     "Unable to open hyperlink:\n\n%s"
+    IDS_ERROR_MATRIX_DIM_EQUAL 
+                            "The matrices (%dx%d and %dx%d) must have equal dimension.\n"
+    IDS_ERROR_MATRIX_DIM_MULT 
+                            "The matrices of size %dx%d and %dx%d cannot be multplied.\n"
+    IDS_ERROR_MATRIX_DIM_CONCAT_HOR 
+                            "The matrices of size %dx%d and %dx%d cannot be concatenated horizontally.\n"
+    IDS_ERROR_MATRIX_DIM_CONCAT_VERT 
+                            "The matrices of size %dx%d und %dx%d cannot be concatenated vertically.\n"
+    IDS_ERROR_MATRIX_DIM_INDEX_BOTH 
+                            "The index pair (%d,%d) is not in the scope of the %dx%d matrix.\n"
+    IDS_ERROR_MATRIX_DIM_INDEX_ROW 
+                            "The row index %d is not in the scope of the %dx%d matrix.\n"
+    IDS_ERROR_MATRIX_DIM_INDEX_COL 
+                            "The column index %d is not in the scope of the %dx%d matrix.\n"
+    IDS_ERROR_MATRIX_DIM_INDEX_RESHAPE 
+                            "The %dx%d matrix cannot be reshaped to size %dx%d.\n"
+    IDS_ERROR_MATRIX_DIM_EQUAL_THREE 
+                            "The matrices (%dx%d, %dx%d and %dx%d) must have equal dimension.\n"
+    IDS_ERROR_VERSION_INSUF_MEM "Insufficent memory"
+    IDS_ERROR_VERSION_EXTRACT "Unable to extract version information"
+    IDS_ERROR_VERSION_NO_INFO "No version information"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_MB_ERROR_TITLE      "Error"
+    IDS_MB_NOTE_TITLE       "Note!"
+    IDS_MB_READY_TITLE      "Ready"
+    IDS_MB_CONFIRM_TITLE    "Confirmation"
+    IDS_MB_CLOSE_ALL_DOCS_MSG "Close all documents?"
+    IDS_MB_ERROR_OPEN_DOC_MSG "Failed to open file %s.\n\nInvalid Format."
+    IDS_MB_SAVE_GRAPH_MSG   "Save with calculation result?"
+    IDS_MB_SAVE_GRAPH_FNAME_MSG "Save %s with calculation result?"
+    IDS_MB_SAVE_NO_CHANGE_MSG "There are no changes to save."
+    IDS_MB_RESTORE_DEFAULT_VALUES_MSG 
+                            "While restoring the default values all current adjustments will be lost. Really restore default values?"
+    IDS_MB_PASTE_EMF_MSG    "The clipboard contents can be displayed only temporarily.\nIt will be faded out again after confirmation of this message."
+    IDS_MB_INVALID_FILE     "Invalid file %s."
+    IDS_MB_INVALID_FILENAME "Invalid file name %s."
+    IDS_MB_NO_FILE_SELECTED "No file selected."
+    IDS_MB_WARNING_VERSION  "This program is %s version %s.\n\nThe File %s\nwas generated by an advancement of this program,\nnamely by %s version %s.\n\nSince the older program does not know the newer\nfile format, errors may occur when opening the file.\nCertain parameters may have unreasonable values.\nIt may even happen that the program does not respond\nany more.\n\nOpen the file anyway?"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_BUTTON_NEXT_TEXT    "Next"
+    IDS_BUTTON_OK_TEXT      "OK"
+    IDS_BUTTON_OK_SAVE_TEXT "OK, Save..."
+    IDS_BUTTON_SAVE_IT_TEXT "Save &As..."
+    IDS_PROGRESS_PERCENT_DONE "%3d%%done..."
+    IDS_FILE_DLG_EXPORT_PS  "PostScript Files (*.ps)|*.ps|Encapsulated PostScript Files (*.eps)|*.eps||"
+    IDS_FILE_DLG_EXPORT_PS_TITLE "Export PostScript"
+    IDS_REOPEN_DOCUMENT_SAFE 
+                            "%s\n\nThis file was modified outside of %s. Reopen?"
+    IDS_REOPEN_DOCUMENT_UNSAFE 
+                            "%s\n\nThis file was modified outside of %s.\nReopen and abandon changes made?"
+    IDS_REOPEN_DOCUMENT_ASK "%s\n\nThis file was modified outside of %s.\nReopen?\n\nNote: A running calculation is aborted thereby."
+    IDS_REOPEN_DOCUMENT_NOTIFY "%s\n\nThis file was modified outside of %s."
+    IDS_LOST_DOCUMENT       "%s\n\nThis file was deleted or moved outside of %s."
+    IDS_ASK_FILE_TO_SAVE    "Save file %1?"
+    IDS_COLOR_FONT          "Font/Lines"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_COLOR_FORE          "Foreground"
+    IDS_COLOR_BACK          "Background"
+    IDS_COLOR_LIGHT_AMBIENT "Ambient Light"
+    IDS_COLOR_LIGHT_DIFFUSE "Diffuse Light"
+    IDS_COLOR_LIGHT_SPECULAR "Specular Light"
+END
+
+STRINGTABLE
+BEGIN
+    IDC_FRAME_COLOR_FONT    "Change the font and line color\nFont and Line Color"
+    IDC_FRAME_COLOR_FORE    "Change the foreground color\nForeground Color"
+    IDC_FRAME_COLOR_BACK    "Change the background color\nBackground Color"
+    IDC_FRAME_COLOR_LIGHT_AMBIENT 
+                            "Change the color of the ambient light\nAmbient Light Color"
+    IDC_FRAME_COLOR_LIGHT_DIFFUSE 
+                            "Change the color of the diffuse light\nDiffuse Light Color"
+    IDC_FRAME_COLOR_LIGHT_SPECULAR 
+                            "Change the color of the specular light\nSpecular Light Color"
+    IDC_RADIO_RAINBOW       "Show the graph in rainbow colors\nRainbow Colors"
+    IDC_RADIO_MONOCHROME    "Show the graph monochromatic\nMonochrome"
+    IDC_CHECK_ANTIALIAS     "Smoothes the contour of the graph\nContour Smoothing"
+    IDC_CHECK_SMOOTH        "Smoothes the color transitions of the graph\nColor Smoothing"
+    IDC_CHECK_LIGHTING      "Lights the graph\nLighting"
+    IDC_CHECK_REMOVE_HIDDEN "Fade out hidden areas of the graph or show black lines additionally\nForeground Only/Black Lines"
+    IDC_RADIO_MODEL_0       "Show the graph as scatter plot\nScatter Plot"
+    IDC_RADIO_MODEL_1       "Show the graph as wire frame\nWire Frame"
+END
+
+STRINGTABLE
+BEGIN
+    IDC_RADIO_MODEL_2       "Show the graph as closed surface\nSurface"
+    IDC_CHECK_VROTATION     "Rotate the graph around the z-Axis\nRotate around z-Axis"
+    IDC_CHECK_LINK_SCALE    "Links the sliders\nLink Sliders"
+    IDC_SLIDER_SCALE_X      "Scale the x-Axis of the graph\nScaling x-Axis"
+    IDC_SLIDER_SCALE_Y      "Scale the y-Axis of the graph\nScaling y-Axis"
+    IDC_SLIDER_SCALE_Z      "Scale the z-Axis of the graph\nScaling z-Axis"
+    IDC_CHECK_LINK_TRANSLATION "Links the sliders\nLink Sliders"
+    IDC_SLIDER_TRANSLATION_X "Move the x-Axis of the graph\nMoving x-Axis"
+    IDC_SLIDER_TRANSLATION_Y "Move the y-Axis of the graph\nMoving y-Axis"
+    IDC_SLIDER_TRANSLATION_Z "Move the z-Axis of the graph\nMoving z-Axis"
+    IDC_EDIT_FONT           "Change the font\nFont"
+    IDC_CHECK_SCALE_SHOW_FRAME 
+                            "Show the frame of the graph coordinates\nGraph Coordinates - Frame"
+    IDC_CHECK_SCALE_SHOW_LABELS 
+                            "Labels the graph coordinates\nGraph Coordinates - Label"
+    IDC_CHECK_SCALE_SHOW_GRID 
+                            "Show additional grid lines of the graph coordinates\nGraph Coordinates - Grid"
+END
+
+STRINGTABLE
+BEGIN
+    IDC_CHECK_SCALE_SHOW_AXIS 
+                            "Show the axis of the graph coordinates\nGraph Coordinates - Axis"
+END
+
+#endif    // English (United States) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_DEU)
+#ifdef _WIN32
+LANGUAGE 7, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\General.rc2"  // Nicht mit Microsoft Visual C++ bearbeitete Ressourcen
+#include "l.deu\afxres.rc"         // Standardkomponenten
+#include "l.deu\afxprint.rc"       // Ressourcen für Drucken/Seitenansicht
+#elif !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\General.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#include "afxprint.rc"       // printing/print preview resources
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
