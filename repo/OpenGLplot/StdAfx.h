@@ -14,7 +14,7 @@
 #define AFX_STDAFX_H__06A3562B_72E5_11D1_A6C2_00A0242C0A32__INCLUDED_
 
 #define WINVER 0x0701
-#define _WIN32_IE 0x500
+#define _WIN32_IE 0x601
 
 #if defined(_MSC_VER) && (_MSC_VER >= 1020)
 #pragma once
