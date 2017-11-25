@@ -1,6 +1,6 @@
 ### Mix2dSP
 
-A small utility with OpenGL capabilities used to calculate nonlinear optical interactions of three waves.
+A small utility (with OpenGL capabilities for implementation of data graphing) used to calculate nonlinear optical interactions of three waves.
 Physical model: wave stands for a light beam with intensity profile of a Gaussian function. The beams are FFT-ed in time and space, and the obtained plane waves are propagated through the nonlinear medium. THe interaction between the plane waves of the considered lights beams are modeled by a set of nonlinear coefficients describing the conversion ratio from one k-vector into another.
 
 Computer model: 
