@@ -161,8 +161,8 @@ typedef struct {
 #endif  //ioinfo
 
 #ifndef _pioinfo
-#define _pioinfo(i) ( __pioinfo[(i) >> IOINFO_L2E] + ((i) & (IOINFO_ARRAY_ELTS - 1)) )
-extern "C" AFX_DATA_IMPORT ioinfo* __pioinfo[];
+//#define _pioinfo(i) ( __pioinfo[(i) >> IOINFO_L2E] + ((i) & (IOINFO_ARRAY_ELTS - 1)) )
+//extern "C" AFX_DATA_IMPORT ioinfo* __pioinfo[];
 #endif  //_pioinfo
 
 #ifndef _osfile
@@ -232,7 +232,7 @@ typedef LPDLGITEMTEMPLATEEXA LPDLGITEMTEMPLATEEX;
 
 const double QNAN = fmod(0., 0.);
 const double pi = 4. * atan(1.);
-const double eps = epsilon();
+const double eps = mymathfuncs::epsilon();
 
 const double eps0 = sqrt(eps);
 const double eps1 = 100. * eps0;

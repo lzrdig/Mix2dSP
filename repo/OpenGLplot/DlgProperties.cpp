@@ -1849,7 +1849,7 @@ void CDlgProperties::UpdateFontColorRect()
 
 	CRect rect;
 
-	m_OptionColorFont = RGB(int(round(pView->m_ColorFontRed*255.0f)),int(round(pView->m_ColorFontGreen*255.0f)),int(round(pView->m_ColorFontBlue*255.0f)));
+	m_OptionColorFont = RGB(int(::round(pView->m_ColorFontRed*255.0f)),int(::round(pView->m_ColorFontGreen*255.0f)),int(::round(pView->m_ColorFontBlue*255.0f)));
 
 	m_ColorFontStatic.SetBkColor(m_OptionColorFont);
 	m_ColorFontStatic.GetWindowRect(&rect);

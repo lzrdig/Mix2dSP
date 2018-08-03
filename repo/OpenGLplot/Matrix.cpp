@@ -13,6 +13,8 @@
 #include "MathAdd.h"
 #include "Resource.h"
 
+//#include <math.h>
+
 #ifdef _DEBUG
 #define new DEBUG_NEW
 #undef THIS_FILE
@@ -28,7 +30,8 @@ static char THIS_FILE[] = __FILE__;
 
 /////////////////////////////////////////////////////////////////////////////
 // CMatrix
-
+namespace mymathfuncs
+{
 CMatrix::CMatrix(const KINDOFORDER& nKindOfOrder)
 {
 	// this is an empty matrix
@@ -54,7 +57,7 @@ CMatrix::CMatrix(const double& firstValue, const double& lastValue, const double
 		Empty();
 	else
 	{
-		SetSize(CSize(1, int(ceil((lastValue-firstValue+stepSize)/stepSize))));
+		SetSize(CSize(1, int(::ceil((double)(lastValue-firstValue+stepSize)/stepSize))));
 		int size = GetTotalSize();
 		for (int k = 0; k < size-1; k++)
 			SetAt(k, firstValue + k*stepSize);
@@ -271,7 +274,7 @@ void CMatrix::Serialize(CArchive& ar, unsigned char numByte)
 				switch (numByte)
 				{
 				case 1:
-					if (_isnan(tmpDouble))
+					if (::_isnan(tmpDouble))
 						tmpChar = 255;
 					else if (tmpDouble == HUGE)
 						tmpChar = 254;
@@ -282,7 +285,7 @@ void CMatrix::Serialize(CArchive& ar, unsigned char numByte)
 					ar << tmpChar;
 					break;
 				case 2:
-					if (_isnan(tmpDouble))
+					if (::_isnan(tmpDouble))
 						tmpShort = 65535;
 					else if (tmpDouble == HUGE)
 						tmpShort = 65534;
@@ -1979,7 +1982,7 @@ CMatrix acos(const CMatrix& inMatrix)
 	outMatrix.SetSize(inMatrix.GetSize());
 	int size = inMatrix.GetTotalSize();
 	for (int k = 0; k < size; k++)
-		outMatrix.SetAt(k, acos(inMatrix.GetAt(k)));
+		outMatrix.SetAt(k, ::acos(inMatrix.GetAt(k)));
 
 	return outMatrix;
 }
@@ -1991,7 +1994,7 @@ CMatrix asin(const CMatrix& inMatrix)
 	outMatrix.SetSize(inMatrix.GetSize());
 	int size = inMatrix.GetTotalSize();
 	for (int k = 0; k < size; k++)
-		outMatrix.SetAt(k, asin(inMatrix.GetAt(k)));
+		outMatrix.SetAt(k, ::asin(inMatrix.GetAt(k)));
 
 	return outMatrix;
 }
@@ -2003,7 +2006,7 @@ CMatrix atan(const CMatrix& inMatrix)
 	outMatrix.SetSize(inMatrix.GetSize());
 	int size = inMatrix.GetTotalSize();
 	for (int k = 0; k < size; k++)
-		outMatrix.SetAt(k, atan(inMatrix.GetAt(k)));
+		outMatrix.SetAt(k, ::atan(inMatrix.GetAt(k)));
 
 	return outMatrix;
 }
@@ -2015,7 +2018,7 @@ CMatrix atan2(const CMatrix& inMatrix, const double& inValue)
 	outMatrix.SetSize(inMatrix.GetSize());
 	int size = inMatrix.GetTotalSize();
 	for (int k = 0; k < size; k++)
-		outMatrix.SetAt(k, atan2(inMatrix.GetAt(k), inValue));
+		outMatrix.SetAt(k, ::atan2(inMatrix.GetAt(k), inValue));
 
 	return outMatrix;
 }
@@ -2027,7 +2030,7 @@ CMatrix atan2(const double& inValue, const CMatrix& inMatrix)
 	outMatrix.SetSize(inMatrix.GetSize());
 	int size = inMatrix.GetTotalSize();
 	for (int k = 0; k < size; k++)
-		outMatrix.SetAt(k, atan2(inValue, inMatrix.GetAt(k)));
+		outMatrix.SetAt(k, ::atan2(inValue, inMatrix.GetAt(k)));
 
 	return outMatrix;
 }
@@ -2041,7 +2044,7 @@ CMatrix atan2(const CMatrix& inMatrix1, const CMatrix& inMatrix2)
 		int sizeX = inMatrix1.GetSize().cx, sizeY = inMatrix1.GetSize().cy;
 		for (int i = 1; i <= sizeX; i++)
 			for (int j = 1; j <= sizeY; j++)
-				outMatrix(i,j) = atan2(inMatrix1(i,j), inMatrix2(i,j));
+				outMatrix(i,j) = ::atan2(inMatrix1(i,j), inMatrix2(i,j));
 	}
 	else if (inMatrix1.GetTotalSize() > 0 && inMatrix2.GetTotalSize() == 1)
 	{
@@ -2050,7 +2053,7 @@ CMatrix atan2(const CMatrix& inMatrix1, const CMatrix& inMatrix2)
 		outMatrix.SetSize(inMatrix1.GetSize());
 		int size = inMatrix1.GetTotalSize();
 		for (int k = 0; k < size; k++)
-			outMatrix.SetAt(k, atan2(inMatrix1.GetAt(k), tmp));
+			outMatrix.SetAt(k, ::atan2(inMatrix1.GetAt(k), tmp));
 	}
 	else if (inMatrix1.GetTotalSize() == 1 && inMatrix2.GetTotalSize() > 0)
 	{
@@ -2059,7 +2062,7 @@ CMatrix atan2(const CMatrix& inMatrix1, const CMatrix& inMatrix2)
 		outMatrix.SetSize(inMatrix2.GetSize());
 		int size = inMatrix2.GetTotalSize();
 		for (int k = 0; k < size; k++)
-			outMatrix.SetAt(k, atan2(tmp, inMatrix2.GetAt(k)));
+			outMatrix.SetAt(k, ::atan2(tmp, inMatrix2.GetAt(k)));
 	}
 	else
 		inMatrix1.DimensionErrorMessage(CMatrix::ERROR_MATRIX_DIM_EQUAL, inMatrix1.GetSize(), inMatrix2.GetSize());
@@ -2074,7 +2077,7 @@ CMatrix ceil(const CMatrix& inMatrix)
 	outMatrix.SetSize(inMatrix.GetSize());
 	int size = inMatrix.GetTotalSize();
 	for (int k = 0; k < size; k++)
-		outMatrix.SetAt(k, ceil(inMatrix.GetAt(k)));
+		outMatrix.SetAt(k, ::ceil(inMatrix.GetAt(k)));
 
 	return outMatrix;
 }
@@ -2086,7 +2089,7 @@ CMatrix cos(const CMatrix& inMatrix)
 	outMatrix.SetSize(inMatrix.GetSize());
 	int size = inMatrix.GetTotalSize();
 	for (int k = 0; k < size; k++)
-		outMatrix.SetAt(k, cos(inMatrix.GetAt(k)));
+		outMatrix.SetAt(k, ::cos(inMatrix.GetAt(k)));
 
 	return outMatrix;
 }
@@ -2098,7 +2101,7 @@ CMatrix cosh(const CMatrix& inMatrix)
 	outMatrix.SetSize(inMatrix.GetSize());
 	int size = inMatrix.GetTotalSize();
 	for (int k = 0; k < size; k++)
-		outMatrix.SetAt(k, cosh(inMatrix.GetAt(k)));
+		outMatrix.SetAt(k, ::cosh(inMatrix.GetAt(k)));
 
 	return outMatrix;
 }
@@ -2110,7 +2113,7 @@ CMatrix exp(const CMatrix& inMatrix)
 	outMatrix.SetSize(inMatrix.GetSize());
 	int size = inMatrix.GetTotalSize();
 	for (int k = 0; k < size; k++)
-		outMatrix.SetAt(k, exp(inMatrix.GetAt(k)));
+		outMatrix.SetAt(k, ::exp(inMatrix.GetAt(k)));
 
 	return outMatrix;
 }
@@ -2122,7 +2125,7 @@ CMatrix fabs(const CMatrix& inMatrix)
 	outMatrix.SetSize(inMatrix.GetSize());
 	int size = inMatrix.GetTotalSize();
 	for (int k = 0; k < size; k++)
-		outMatrix.SetAt(k, fabs(inMatrix.GetAt(k)));
+		outMatrix.SetAt(k, ::fabs(inMatrix.GetAt(k)));
 
 	return outMatrix;
 }
@@ -2146,7 +2149,7 @@ CMatrix floor(const CMatrix& inMatrix)
 	outMatrix.SetSize(inMatrix.GetSize());
 	int size = inMatrix.GetTotalSize();
 	for (int k = 0; k < size; k++)
-		outMatrix.SetAt(k, floor(inMatrix.GetAt(k)));
+		outMatrix.SetAt(k, ::floor(inMatrix.GetAt(k)));
 
 	return outMatrix;
 }
@@ -2158,7 +2161,7 @@ CMatrix fmod(const CMatrix& inMatrix, const double& inValue)
 	outMatrix.SetSize(inMatrix.GetSize());
 	int size = inMatrix.GetTotalSize();
 	for (int k = 0; k < size; k++)
-		outMatrix.SetAt(k, fmod(inMatrix.GetAt(k), inValue));
+		outMatrix.SetAt(k, ::fmod(inValue, inMatrix.GetAt(k)));
 
 	return outMatrix;
 }
@@ -2170,7 +2173,7 @@ CMatrix fmod(const double& inValue, const CMatrix& inMatrix)
 	outMatrix.SetSize(inMatrix.GetSize());
 	int size = inMatrix.GetTotalSize();
 	for (int k = 0; k < size; k++)
-		outMatrix.SetAt(k, fmod(inValue, inMatrix.GetAt(k)));
+		outMatrix.SetAt(k, ::fmod(inValue, inMatrix.GetAt(k)));
 
 	return outMatrix;
 }
@@ -2184,7 +2187,7 @@ CMatrix fmod(const CMatrix& inMatrix1, const CMatrix& inMatrix2)
 		int sizeX = inMatrix1.GetSize().cx, sizeY = inMatrix1.GetSize().cy;
 		for (int i = 1; i <= sizeX; i++)
 			for (int j = 1; j <= sizeY; j++)
-				outMatrix(i,j) = fmod(inMatrix1(i,j), inMatrix2(i,j));
+				outMatrix(i,j) = ::fmod(inMatrix1(i,j), inMatrix2(i,j));
 	}
 	else if (inMatrix1.GetTotalSize() > 0 && inMatrix2.GetTotalSize() == 1)
 	{
@@ -2193,7 +2196,7 @@ CMatrix fmod(const CMatrix& inMatrix1, const CMatrix& inMatrix2)
 		outMatrix.SetSize(inMatrix1.GetSize());
 		int size = inMatrix1.GetTotalSize();
 		for (int k = 0; k < size; k++)
-			outMatrix.SetAt(k, fmod(inMatrix1.GetAt(k), tmp));
+			outMatrix.SetAt(k, ::fmod(inMatrix1.GetAt(k), tmp));
 	}
 	else if (inMatrix1.GetTotalSize() == 1 && inMatrix2.GetTotalSize() > 0)
 	{
@@ -2202,7 +2205,7 @@ CMatrix fmod(const CMatrix& inMatrix1, const CMatrix& inMatrix2)
 		outMatrix.SetSize(inMatrix2.GetSize());
 		int size = inMatrix2.GetTotalSize();
 		for (int k = 0; k < size; k++)
-			outMatrix.SetAt(k, fmod(tmp, inMatrix2.GetAt(k)));
+			outMatrix.SetAt(k, ::fmod(tmp, inMatrix2.GetAt(k)));
 	}
 	else
 		inMatrix1.DimensionErrorMessage(CMatrix::ERROR_MATRIX_DIM_EQUAL, inMatrix1.GetSize(), inMatrix2.GetSize());
@@ -2276,7 +2279,7 @@ CMatrix log(const CMatrix& inMatrix)
 	outMatrix.SetSize(inMatrix.GetSize());
 	int size = inMatrix.GetTotalSize();
 	for (int k = 0; k < size; k++)
-		outMatrix.SetAt(k, log(inMatrix.GetAt(k)));
+		outMatrix.SetAt(k, ::log(inMatrix.GetAt(k)));
 
 	return outMatrix;
 }
@@ -2288,7 +2291,7 @@ CMatrix log10(const CMatrix& inMatrix)
 	outMatrix.SetSize(inMatrix.GetSize());
 	int size = inMatrix.GetTotalSize();
 	for (int k = 0; k < size; k++)
-		outMatrix.SetAt(k, log10(inMatrix.GetAt(k)));
+		outMatrix.SetAt(k, ::log10(inMatrix.GetAt(k)));
 
 	return outMatrix;
 }
@@ -2300,7 +2303,7 @@ CMatrix pow(const CMatrix& inMatrix, const double& inValue)
 	outMatrix.SetSize(inMatrix.GetSize());
 	int size = inMatrix.GetTotalSize();
 	for (int k = 0; k < size; k++)
-		outMatrix.SetAt(k, pow(inMatrix.GetAt(k), inValue));
+		outMatrix.SetAt(k, ::pow(inMatrix.GetAt(k), inValue));
 
 	return outMatrix;
 }
@@ -2312,7 +2315,7 @@ CMatrix pow(const double& inValue, const CMatrix& inMatrix)
 	outMatrix.SetSize(inMatrix.GetSize());
 	int size = inMatrix.GetTotalSize();
 	for (int k = 0; k < size; k++)
-		outMatrix.SetAt(k, pow(inValue, inMatrix.GetAt(k)));
+		outMatrix.SetAt(k, ::pow(inValue, inMatrix.GetAt(k)));
 
 	return outMatrix;
 }
@@ -2326,7 +2329,7 @@ CMatrix pow(const CMatrix& inMatrix1, const CMatrix& inMatrix2)
 		int sizeX = inMatrix1.GetSize().cx, sizeY = inMatrix1.GetSize().cy;
 		for (int i = 1; i <= sizeX; i++)
 			for (int j = 1; j <= sizeY; j++)
-				outMatrix(i,j) = pow(inMatrix1(i,j), inMatrix2(i,j));
+				outMatrix(i,j) = ::pow(inMatrix1(i,j), inMatrix2(i,j));
 	}
 	else if (inMatrix1.GetTotalSize() > 0 && inMatrix2.GetTotalSize() == 1)
 	{
@@ -2335,7 +2338,7 @@ CMatrix pow(const CMatrix& inMatrix1, const CMatrix& inMatrix2)
 		outMatrix.SetSize(inMatrix1.GetSize());
 		int size = inMatrix1.GetTotalSize();
 		for (int k = 0; k < size; k++)
-			outMatrix.SetAt(k, pow(inMatrix1.GetAt(k), tmp));
+			outMatrix.SetAt(k, ::pow(inMatrix1.GetAt(k), tmp));
 	}
 	else if (inMatrix1.GetTotalSize() == 1 && inMatrix2.GetTotalSize() > 0)
 	{
@@ -2344,7 +2347,7 @@ CMatrix pow(const CMatrix& inMatrix1, const CMatrix& inMatrix2)
 		outMatrix.SetSize(inMatrix2.GetSize());
 		int size = inMatrix2.GetTotalSize();
 		for (int k = 0; k < size; k++)
-			outMatrix.SetAt(k, pow(tmp, inMatrix2.GetAt(k)));
+			outMatrix.SetAt(k, ::pow(tmp, inMatrix2.GetAt(k)));
 	}
 	else
 		inMatrix1.DimensionErrorMessage(CMatrix::ERROR_MATRIX_DIM_EQUAL, inMatrix1.GetSize(), inMatrix2.GetSize());
@@ -2383,7 +2386,7 @@ CMatrix sin(const CMatrix& inMatrix)
 	outMatrix.SetSize(inMatrix.GetSize());
 	int size = inMatrix.GetTotalSize();
 	for (int k = 0; k < size; k++)
-		outMatrix.SetAt(k, sin(inMatrix.GetAt(k)));
+		outMatrix.SetAt(k, ::sin(inMatrix.GetAt(k)));
 
 	return outMatrix;
 }
@@ -2395,7 +2398,7 @@ CMatrix sinh(const CMatrix& inMatrix)
 	outMatrix.SetSize(inMatrix.GetSize());
 	int size = inMatrix.GetTotalSize();
 	for (int k = 0; k < size; k++)
-		outMatrix.SetAt(k, sinh(inMatrix.GetAt(k)));
+		outMatrix.SetAt(k, ::sinh(inMatrix.GetAt(k)));
 
 	return outMatrix;
 }
@@ -2407,7 +2410,7 @@ CMatrix sqrt(const CMatrix& inMatrix)
 	outMatrix.SetSize(inMatrix.GetSize());
 	int size = inMatrix.GetTotalSize();
 	for (int k = 0; k < size; k++)
-		outMatrix.SetAt(k, sqrt(inMatrix.GetAt(k)));
+		outMatrix.SetAt(k, ::sqrt(inMatrix.GetAt(k)));
 
 	return outMatrix;
 }
@@ -2419,7 +2422,7 @@ CMatrix tan(const CMatrix& inMatrix)
 	outMatrix.SetSize(inMatrix.GetSize());
 	int size = inMatrix.GetTotalSize();
 	for (int k = 0; k < size; k++)
-		outMatrix.SetAt(k, tan(inMatrix.GetAt(k)));
+		outMatrix.SetAt(k, ::tan(inMatrix.GetAt(k)));
 
 	return outMatrix;
 }
@@ -2431,7 +2434,7 @@ CMatrix tanh(const CMatrix& inMatrix)
 	outMatrix.SetSize(inMatrix.GetSize());
 	int size = inMatrix.GetTotalSize();
 	for (int k = 0; k < size; k++)
-		outMatrix.SetAt(k, tanh(inMatrix.GetAt(k)));
+		outMatrix.SetAt(k, ::tanh(inMatrix.GetAt(k)));
 
 	return outMatrix;
 }
@@ -2502,7 +2505,7 @@ double matMaxFinite(const CMatrix& inMatrix)
 	{
 		int size = inMatrix.GetTotalSize();
 		for (int k = 0; k < size; k++)
-			if (_finite(tmpValue = inMatrix.GetAt(k)))
+			if (::_finite(tmpValue = inMatrix.GetAt(k)))
 				outValue = max(outValue, tmpValue);
 	}
 	else
@@ -2518,7 +2521,7 @@ double matMinFinite(const CMatrix& inMatrix)
 	{
 		int size = inMatrix.GetTotalSize();
 		for (int k = 0; k < size; k++)
-			if (_finite(tmpValue = inMatrix.GetAt(k)))
+			if (::_finite(tmpValue = inMatrix.GetAt(k)))
 				outValue = min(outValue, tmpValue);
 	}
 	else
@@ -2684,7 +2687,7 @@ CIntMatrix _finite(const CMatrix& inMatrix)
 	outMatrix.SetSize(inMatrix.GetSize());
 	int size = inMatrix.GetTotalSize();
 	for (int k = 0; k < size; k++)
-		outMatrix.SetAt(k, _finite(inMatrix.GetAt(k)));
+		outMatrix.SetAt(k, ::_finite(inMatrix.GetAt(k)));
 
 	return outMatrix;
 }
@@ -2696,7 +2699,7 @@ CIntMatrix _isnan(const CMatrix& inMatrix)
 	outMatrix.SetSize(inMatrix.GetSize());
 	int size = inMatrix.GetTotalSize();
 	for (int k = 0; k < size; k++)
-		outMatrix.SetAt(k, _isnan(inMatrix.GetAt(k)));
+		outMatrix.SetAt(k, ::_isnan(inMatrix.GetAt(k)));
 
 	return outMatrix;
 }
@@ -2929,7 +2932,7 @@ double meanFinite(const CMatrix& inMatrix)
 	double tmp = 0.;
 	int size = inMatrix.GetTotalSize(), counter = 0;
 	for (int k = 0; k < size; k++)
-		if (_finite(inMatrix[k]))
+		if (::_finite(inMatrix[k]))
 		{
 			counter++;
 			tmp += inMatrix[k];
@@ -2948,7 +2951,7 @@ double rms(const CMatrix& inMatrix)
 		tmp += (inMatrix[k]-average)*(inMatrix[k]-average);
 	if (size > 1)
 		tmp /= (double)size - 1.;
-	tmp = sqrt(tmp);
+	tmp = ::sqrt(tmp);
 
 	return tmp;
 }
@@ -2958,14 +2961,14 @@ double rmsFinite(const CMatrix& inMatrix)
 	double tmp = 0., average = meanFinite(inMatrix);
 	int size = inMatrix.GetTotalSize(), counter = 0;
 	for (int k = 0; k < size; k++)
-		if (_finite(inMatrix[k]))
+		if (::_finite(inMatrix[k]))
 		{
 			counter++;
 			tmp += (inMatrix[k]-average)*(inMatrix[k]-average);
 		}
 	if (counter > 1)
 		tmp /= (double)counter - 1.;
-	tmp = sqrt(tmp);
+	tmp = ::sqrt(tmp);
 
 	return tmp;
 }
@@ -3102,7 +3105,7 @@ void sph2cart(const CMatrix& Alpha, const CMatrix& Theta, const CMatrix& Radius,
 	{
 		X = cos(Alpha)*Radius[0]*cos(Theta[0]);
 		Y = sin(Alpha)*Radius[0]*cos(Theta[0]);
-		Z = CMatrix(Alpha.GetSize(),Radius[0]*sin(Theta[0]));
+		Z = CMatrix(Alpha.GetSize(),Radius[0]*::sin(Theta[0]));
 	}
 	else
 		X.DimensionErrorMessage(CMatrix::ERROR_MATRIX_DIM_EQUAL, Alpha.GetSize(), Theta.GetSize(), Radius.GetSize());
@@ -3123,8 +3126,8 @@ void reduceSize(CMatrix& inMatrix, const int& maxTotal)
 	if (inMatrix.IsEmpty())
 		return;
 
-	maxRows = (int)ceil(sqrt(maxTotal * double(inMatrix.GetSize().cx)/double(inMatrix.GetSize().cy)));
-	maxColumns = (int)ceil(sqrt(maxTotal * double(inMatrix.GetSize().cy)/double(inMatrix.GetSize().cx)));
+	maxRows = (int)::ceil(::sqrt(maxTotal * double(inMatrix.GetSize().cx)/double(inMatrix.GetSize().cy)));
+	maxColumns = (int)::ceil(::sqrt(maxTotal * double(inMatrix.GetSize().cy)/double(inMatrix.GetSize().cx)));
 	reduceSize(inMatrix, maxRows, maxColumns);
 }
 
@@ -3168,16 +3171,16 @@ void reduceSize(CMatrix& inMatrix, const int& maxRows, const int& maxColumns)
 					{
 						indexY = min(sizeY, (j-1)*columnFac + l);
 						entry = tmpMatrix(indexX,indexY);
-						if (_finite(value))
+						if (::_finite(value))
 						{
-							if (_finite(entry))
+							if (::_finite(entry))
 								value += entry;
 							else
 								value = entry;
 						}
 					}
 				}
-				if (_finite(value))
+				if (::_finite(value))
 					value /= double(rowFac*columnFac);
 				inMatrix(i,j) = value;
 			}
@@ -3260,4 +3263,5 @@ BOOL LinSolveGaussSimple(const CMatrix& A, const CMatrix& b, CMatrix& x)
 	}
 
 	return bIsSolvable;
+}
 }

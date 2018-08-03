@@ -119,7 +119,7 @@ void CTextProgressCtrl::OnPaint()
 	if (m_bShowHand)
 	{
 		double tmpNum = (clientRect.right - clientRect.left)*(1. - 2.*m_dHandWidth)*Fraction;
-		leftRect.left = (int)(round(tmpNum)) + clientRect.left;
+		leftRect.left = (int)(mymathfuncs::round(tmpNum)) + clientRect.left;
 		leftRect.right = leftRect.left + (int)ceil((clientRect.right - clientRect.left)*2.*m_dHandWidth);
 
 		dc.FillSolidRect(rightRect, m_colBk);

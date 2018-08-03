@@ -75,17 +75,17 @@ void CPsRenderer::SpewWireFrameEPS(FILE* stream, LPCTSTR lpszFilename, BOOL bSor
 	// Title
 	tmpString = lpszFilename;
 	tmpString = tmpString.Right(tmpString.GetLength()-tmpString.ReverseFind('\\')-1);
-	fprintf(stream, "%%%%Title: %s\n", tmpString);
+	fprintf(stream, "%%%%Title: %s\n", tmpString.GetBuffer());
 
 	// Creator
 	GetModuleFileName(AfxGetInstanceHandle(), tmpString.GetBuffer(_MAX_PATH), _MAX_PATH);
 	tmpString.ReleaseBuffer();
 	tmpString = tmpString.Right(tmpString.GetLength()-tmpString.ReverseFind('\\')-1);
-	fprintf(stream, "%%%%Creator: %s\n", tmpString);
+	fprintf(stream, "%%%%Creator: %s\n", tmpString.GetBuffer());
 
 	// CeationDate
 	tmpString = COleDateTime::GetCurrentTime().Format("%m/%d/%y %H:%M");
-	fprintf(stream, "%%%%CreationDate: %s\n", tmpString);
+	fprintf(stream, "%%%%CreationDate: %s\n", tmpString.GetBuffer());
 
 	// BoundingBox/Pages/Page
 	if (m_pBoundingBox)

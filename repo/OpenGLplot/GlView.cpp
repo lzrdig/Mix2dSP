@@ -24,6 +24,7 @@
 #include "DlgProperties.h"
 #include "FileDialogEx.h"
 #include "PsRenderer.h"
+#include "Matrix.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -34,6 +35,9 @@ static char THIS_FILE[] = __FILE__;
 #if _MSC_VER < 1200
 IMPLEMENT_DYNCREATE(CGlPreviewView, CPreviewView)
 #endif // _MSC_VER < 1200
+
+
+//using namespace mymathfuncs;
 
 /////////////////////////////////////////////////////////////////////////////
 // CGlView
@@ -1431,7 +1435,7 @@ BOOL CGlView::CreateViewGLContext()
 
 void CGlView::AddToZoomHistory()
 {
-	CMatrix tmpMatrix;
+	mymathfuncs::CMatrix tmpMatrix;
 	tmpMatrix.SetSize(4);
 	tmpMatrix[0] = m_xScaling;
 	tmpMatrix[1] = m_yScaling;
@@ -1447,7 +1451,7 @@ BOOL CGlView::GetFromZoomHistory()
 		return FALSE;	// Nothing to do
 
 	int tmpUpperBound = m_ZoomHistory.GetUpperBound();
-	CMatrix& tmpMatrix = m_ZoomHistory.ElementAt(tmpUpperBound);
+	mymathfuncs::CMatrix& tmpMatrix = m_ZoomHistory.ElementAt(tmpUpperBound);
 
 	m_xScaling = tmpMatrix[0];
 	m_yScaling = tmpMatrix[1];
@@ -1633,7 +1637,7 @@ BOOL CGlView::EditCopy(CRect mRect, int nReduceResCount)
 			{
 				bSuccess = TRUE;
 				if (nReduceResCount > 0)
-					pApp->SetStatusBarInfo(POLICY_RESOLUTION_REDUCED, (int)round(fac*72.));
+					pApp->SetStatusBarInfo(POLICY_RESOLUTION_REDUCED, (int)::round(fac*72.));
 			}
 			else
 			{
@@ -1658,7 +1662,7 @@ void CGlView::OnEditFont()
 
 	LOGFONT logFont = m_LogFont;
 	CFontDialog dlg(&logFont);
-	dlg.m_cf.rgbColors = RGB(int(round(m_ColorFontRed*255.0f)),int(round(m_ColorFontGreen*255.0f)),int(round(m_ColorFontBlue*255.0f)));
+	dlg.m_cf.rgbColors = RGB(int(::round(m_ColorFontRed*255.0f)),int(::round(m_ColorFontGreen*255.0f)),int(::round(m_ColorFontBlue*255.0f)));
 	if (dlg.DoModal() == IDOK)
 	{
 		pApp->m_OptionColorFont = dlg.GetColor();
@@ -1747,7 +1751,7 @@ BOOL CGlView::CheckColors(const COLORREF& OptionColorBack, COLORREF& OptionColor
 	if (!CheckColors(ColorBackRed, ColorBackGreen, ColorBackBlue, ColorForeRed, ColorForeGreen, ColorForeBlue))
 	{
 
-		OptionColorFore = RGB(int(round(ColorForeRed*255.0f)),int(round(ColorForeGreen*255.0f)),int(round(ColorForeBlue*255.0f)));
+		OptionColorFore = RGB(int(::round(ColorForeRed*255.0f)),int(::round(ColorForeGreen*255.0f)),int(::round(ColorForeBlue*255.0f)));
 
 		return FALSE;	// color had to be changed
 	}
@@ -1759,9 +1763,9 @@ BOOL CGlView::CheckColors(const float& ColorBackRed, const float& ColorBackGreen
 {
 	if ((ColorBackRed-ColorForeRed)*(ColorBackRed-ColorForeRed)+(ColorBackGreen-ColorForeGreen)*(ColorBackGreen-ColorForeGreen)+(ColorBackBlue-ColorForeBlue)*(ColorBackBlue-ColorForeBlue) < .12)
 	{
-		ColorForeRed = (float)round(1.0-ColorBackRed);
-		ColorForeGreen = (float)round(1.0-ColorBackGreen);
-		ColorForeBlue = (float)round(min((ColorBackRed+ColorBackGreen)/2.,1.-(ColorBackRed+ColorBackGreen)/2.));
+		ColorForeRed = (float)::round(1.0-ColorBackRed);
+		ColorForeGreen = (float)::round(1.0-ColorBackGreen);
+		ColorForeBlue = (float)::round(min((ColorBackRed+ColorBackGreen)/2.,1.-(ColorBackRed+ColorBackGreen)/2.));
 
 		return FALSE;	// color had to be changed
 	}
@@ -1877,7 +1881,7 @@ void CGlView::DrawZoomRect()
 	lineStipple = 0x087f;
 	glLineStipple(1, lineStipple);
 
-	glColor3d(round(static_cast<double>(1.0-m_ColorBackRed)), round(1.0-m_ColorBackGreen), round(min((m_ColorBackRed+m_ColorBackGreen)/2.,1.-(m_ColorBackRed+m_ColorBackGreen)/2.)));
+	glColor3d(::round(static_cast<double>(1.0-m_ColorBackRed)), ::round(1.0-m_ColorBackGreen), ::round(min((m_ColorBackRed+m_ColorBackGreen)/2.,1.-(m_ColorBackRed+m_ColorBackGreen)/2.)));
 	glBegin(GL_LINE_LOOP);
 	glVertex2d(m_StartPoint[0], m_StartPoint[1]);
 	glVertex2d(m_EndPoint[0], m_StartPoint[1]);
@@ -1905,7 +1909,7 @@ void CGlView::DrawRubberBand()
 	lineStipple = 0x087f;
 	glLineStipple(1, lineStipple);
 
-	glColor3d(round(1.0-m_ColorBackRed), round(1.0-m_ColorBackGreen), round(min((m_ColorBackRed+m_ColorBackGreen)/2.,1.-(m_ColorBackRed+m_ColorBackGreen)/2.)));
+	glColor3d(::round(1.0-m_ColorBackRed), ::round(1.0-m_ColorBackGreen), ::round(min((m_ColorBackRed+m_ColorBackGreen)/2.,1.-(m_ColorBackRed+m_ColorBackGreen)/2.)));
 	glBegin(GL_LINE_STRIP);
 	glVertex2d(m_StartPoint[0], m_StartPoint[1]);
 	glVertex2d(m_EndPoint[0], m_EndPoint[1]);
@@ -1956,7 +1960,7 @@ void CGlView::DrawHorizontalBands()
 	lineStipple = 0x087f;
 	glLineStipple(1, lineStipple);
 
-	glColor3d(round(1.0-m_ColorBackRed), round(1.0-m_ColorBackGreen), round(min((m_ColorBackRed+m_ColorBackGreen)/2.,1.-(m_ColorBackRed+m_ColorBackGreen)/2.)));
+	glColor3d(::round(1.0-m_ColorBackRed), ::round(1.0-m_ColorBackGreen), ::round(min((m_ColorBackRed+m_ColorBackGreen)/2.,1.-(m_ColorBackRed+m_ColorBackGreen)/2.)));
 	glBegin(GL_LINE_LOOP);
 	glVertex2d(-1., m_StartPoint[1]);
 	glVertex2d(1., m_StartPoint[1]);
@@ -1986,7 +1990,7 @@ void CGlView::DrawVerticalBands()
 	lineStipple = 0x087f;
 	glLineStipple(1, lineStipple);
 
-	glColor3d(round(1.0-m_ColorBackRed), round(1.0-m_ColorBackGreen), round(min((m_ColorBackRed+m_ColorBackGreen)/2.,1.-(m_ColorBackRed+m_ColorBackGreen)/2.)));
+	glColor3d(::round(1.0-m_ColorBackRed), ::round(1.0-m_ColorBackGreen), ::round(min((m_ColorBackRed+m_ColorBackGreen)/2.,1.-(m_ColorBackRed+m_ColorBackGreen)/2.)));
 	glBegin(GL_LINE_LOOP);
 	glVertex2d(m_StartPoint[0], -1.);
 	glVertex2d(m_StartPoint[0], 1.);
@@ -2004,7 +2008,7 @@ void CGlView::DrawVerticalBands()
 /////////////////////////////////////////////////////////////////////////////
 // Plot and surf
 
-void CGlView::Plot2d(CMatrix* pXX, CMatrix* pYY, CMatrix* pCC)						// Aufruf mit 3 Pointern auf CMatrix
+void CGlView::Plot2d(mymathfuncs::CMatrix* pXX, mymathfuncs::CMatrix* pYY, mymathfuncs::CMatrix* pCC)						// Aufruf mit 3 Pointern auf CMatrix
 {
 	m_XRenderArray.SetSize(1);
 	m_YRenderArray.SetSize(1);
@@ -3110,7 +3114,7 @@ void CGlView::RenderSceneScale2d()
 			if (m_bScaleShowLabels)
 			{
 				double negStrWidth1, negStrWidth2;
-				double objx, objy, objz;
+				double objx, objy;
 
 				gluUnProject(viewport[0] + viewport[2]/2., viewport[1] + viewport[3]/2., 0., 
 								modelMatrix, projMatrix, viewport, 
@@ -3184,7 +3188,7 @@ void CGlView::RenderSceneScale2d()
 
 			if (m_nScaleShowGrid != 0)
 			{
-				int l, h, size;
+				int l, h;
 
 				if (gluUnProject(viewport[0], viewport[1], 0., 
 								modelMatrix, projMatrix, viewport, 
@@ -3279,7 +3283,7 @@ void CGlView::RenderSceneScale2d()
 						nRefinementX = 5;
 
 					ASSERT(coarseGridXNormalized.GetSize().cx == 1);
-					int size = coarseGridXNormalized.GetSize().cy;
+					size = coarseGridXNormalized.GetSize().cy;
 					if (size > 1)
 						dStepSizeX = coarseGridXNormalized[1]-coarseGridXNormalized[0];
 					else
@@ -3395,7 +3399,7 @@ void CGlView::RenderSceneScale2d()
 						nRefinementY = 5;
 
 					ASSERT(coarseGridYNormalized.GetSize().cx == 1);
-					int size = coarseGridYNormalized.GetSize().cy;
+					size = coarseGridYNormalized.GetSize().cy;
 					if (size > 1)
 						dStepSizeY = coarseGridYNormalized[1]-coarseGridYNormalized[0];
 					else
@@ -3495,7 +3499,7 @@ void CGlView::RenderSceneScale2d()
 
 			if (m_bScaleShowLabels)
 			{
-				int l, size;
+				int l;
 
 				glListBase(m_nListBaseSmall);
 
@@ -3831,7 +3835,7 @@ void CGlView::RenderSceneScale3d()
 
 			if (m_nScaleShowGrid != 0)
 			{
-				int l, h, size;
+				int l, h;
 
 				double dXMin, dXMax, dDiffX, dDiffXOrig;
 				dXMin = pSS->m_dXMin;
@@ -3903,7 +3907,7 @@ void CGlView::RenderSceneScale3d()
 						nRefinementX = 5;
 
 					ASSERT(coarseGridXNormalized.GetSize().cx == 1);
-					int size = coarseGridXNormalized.GetSize().cy;
+					size = coarseGridXNormalized.GetSize().cy;
 					if (size > 1)
 						dStepSizeX = coarseGridXNormalized[1]-coarseGridXNormalized[0];
 					else
@@ -4005,7 +4009,7 @@ void CGlView::RenderSceneScale3d()
 						nRefinementY = 5;
 
 					ASSERT(coarseGridYNormalized.GetSize().cx == 1);
-					int size = coarseGridYNormalized.GetSize().cy;
+					size = coarseGridYNormalized.GetSize().cy;
 					if (size > 1)
 						dStepSizeY = coarseGridYNormalized[1]-coarseGridYNormalized[0];
 					else
@@ -4107,7 +4111,7 @@ void CGlView::RenderSceneScale3d()
 						nRefinementZ = 5;
 
 					ASSERT(coarseGridZNormalized.GetSize().cx == 1);
-					int size = coarseGridZNormalized.GetSize().cy;
+					size = coarseGridZNormalized.GetSize().cy;
 					if (size > 1)
 						dStepSizeZ = coarseGridZNormalized[1]-coarseGridZNormalized[0];
 					else
@@ -4344,7 +4348,7 @@ void CGlView::RenderSceneScale3d()
 
 			if (m_bScaleShowLabels)
 			{
-				int l, size;
+				int l;
 
 				posStrHeight = abs(m_LogFont.lfHeight)*float(72.*m_dFontRatio/m_pDC->GetDeviceCaps(LOGPIXELSY));
 
@@ -5381,7 +5385,7 @@ void CGlView::OnEditPasteEMF()
 	ENHMETAHEADER emhdr;
 	GetEnhMetaFileHeader(hMetaFile, sizeof(ENHMETAHEADER), &emhdr);
 	nWndWidth = rect.Width();
-	rect.right = (int)round(double(rect.bottom*(emhdr.rclFrame.right-emhdr.rclFrame.left))/double(emhdr.rclFrame.bottom-emhdr.rclFrame.top));
+	rect.right = (int)::round(double(rect.bottom*(emhdr.rclFrame.right-emhdr.rclFrame.left))/double(emhdr.rclFrame.bottom-emhdr.rclFrame.top));
 	nMetaWidth = rect.Width();
 	rect.left -= (nMetaWidth - nWndWidth)/2;
 	rect.right -= (nMetaWidth - nWndWidth)/2;

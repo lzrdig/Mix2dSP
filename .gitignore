@@ -243,3 +243,5 @@ ModelManifest.xml
 
 # FAKE - F# Make
 .fake/
+/repo/OpenGLplot/Enu Debug/oglplot.tlog
+/repo/OpenGLplot/Enu Debug

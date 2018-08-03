@@ -22,6 +22,9 @@
 #include "Scale.h"
 #include "Helper.h"
 
+using namespace mymathfuncs;
+
+
 class CDlgProperties;
 
 class AFX_EXT_CLASS_GENERAL CGlView : public CView
@@ -183,7 +186,7 @@ public:
 	void PrepareBkgnd(BOOL bBegin);
 
 	// Plotting
-	void Plot2d(CMatrix* pXX, CMatrix* pYY, CMatrix* pCC);
+	void Plot2d(mymathfuncs::CMatrix* pXX, mymathfuncs::CMatrix* pYY, mymathfuncs::CMatrix* pCC);
 	void Plot2d(CMatrix& matX, CMatrix& matY, CMatrix& matC);
 	void Plot2d(CMatrix* pXX, CMatrix* pYY);
 	void Plot2d(CMatrix& matX, CMatrix& matY);

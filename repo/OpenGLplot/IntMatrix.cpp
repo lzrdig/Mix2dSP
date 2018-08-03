@@ -28,7 +28,8 @@ static char THIS_FILE[] = __FILE__;
 
 /////////////////////////////////////////////////////////////////////////////
 // CIntMatrix
-
+namespace mymathfuncs
+{
 CIntMatrix::CIntMatrix(const KINDOFORDER& nKindOfOrder)
 {
 	// this is an empty matrix
@@ -54,7 +55,7 @@ CIntMatrix::CIntMatrix(const int& firstValue, const int& lastValue, const double
 		Empty();
 	else
 	{
-		SetSize(CSize(1, int(ceil((lastValue-firstValue+stepSize)/stepSize))));
+		SetSize(CSize(1, int(::ceil((lastValue-firstValue+stepSize)/stepSize))));
 		int size = GetTotalSize();
 		for (int k = 0; k < size-1; k++)
 			SetAt(k, int(firstValue + k*stepSize));
@@ -1802,7 +1803,7 @@ CIntMatrix abs(const CIntMatrix& inMatrix)
 	outMatrix.SetSize(inMatrix.GetSize());
 	int size = inMatrix.GetTotalSize();
 	for (int k = 0; k < size; k++)
-		outMatrix.SetAt(k, abs(inMatrix.GetAt(k)));
+		outMatrix.SetAt(k, ::abs(inMatrix.GetAt(k)));
 
 	return outMatrix;
 }
@@ -2164,8 +2165,8 @@ void reduceSize(CIntMatrix& inMatrix, const int& maxTotal)
 	if (inMatrix.IsEmpty())
 		return;
 
-	maxRows = (int)ceil(sqrt(maxTotal * double(inMatrix.GetSize().cx)/double(inMatrix.GetSize().cy)));
-	maxColumns = (int)ceil(sqrt(maxTotal * double(inMatrix.GetSize().cy)/double(inMatrix.GetSize().cx)));
+	maxRows = (int)::ceil(::sqrt(maxTotal * double(inMatrix.GetSize().cx)/double(inMatrix.GetSize().cy)));
+	maxColumns = (int)::ceil(::sqrt(maxTotal * double(inMatrix.GetSize().cy)/double(inMatrix.GetSize().cx)));
 	reduceSize(inMatrix, maxRows, maxColumns);
 }
 
@@ -2216,4 +2217,5 @@ void reduceSize(CIntMatrix& inMatrix, const int& maxRows, const int& maxColumns)
 			}
 		}
 	}
+}
 }
