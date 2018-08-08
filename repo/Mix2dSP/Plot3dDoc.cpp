@@ -12,18 +12,19 @@
 
 #include "StdAfx.h"
 #include <istream>
-#include "Matrix.h"
-#include "IntMatrix.h"
-#include "MathAdd.h"
+
+//#include "Matrix.h"
+//#include "IntMatrix.h"
+//#include "MathAdd.h"
 
 #include "Mix_Prog.h"
 #include "MainFrm.h"
-
 #include "Plot3dDoc.h"
 #include "Plot3dView.h"
-#include "GraphDlg.h"
+//#include "GraphDlg.h"
 
 using namespace std;
+using namespace mymathfuncs;
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -236,7 +237,7 @@ void CPlot3dDoc::ShowViews(BOOL bActivate)
 /////////////////////////////////////////////////////////////////////////////
 // Ergebnisdaten Skalieren
 /////////////////////////////////////////////////////////////////////////////
-void CPlot3dDoc::Scale2DView(const KINDOFSCALE& nKindOfScale, CScale& matS, CMatrix& matX, CMatrix& matY)
+void CPlot3dDoc::Scale2DView(const KINDOFSCALE& nKindOfScale, CScale& matS, mymathfuncs::CMatrix& matX, mymathfuncs::CMatrix& matY)
 {
 	if (nKindOfScale == KOS_AXIS_EQUAL)						// scale axis simultaneously and do not center them
 	{
@@ -341,7 +342,7 @@ void CPlot3dDoc::Scale2DView(const KINDOFSCALE& nKindOfScale, CScale& matS, CMat
 	}
 }
 
-void CPlot3dDoc::Scale3DView(const KINDOFSCALE& nKindOfScale, CScale& matS, CMatrix& matX, CMatrix& matY, CMatrix& matZ)
+void CPlot3dDoc::Scale3DView(const KINDOFSCALE& nKindOfScale, CScale& matS, mymathfuncs::CMatrix& matX, mymathfuncs::CMatrix& matY, mymathfuncs::CMatrix& matZ)
 {
 	if (nKindOfScale == KOS_AXIS_EQUAL)						// scale axis simultaneously and do not center them
 	{

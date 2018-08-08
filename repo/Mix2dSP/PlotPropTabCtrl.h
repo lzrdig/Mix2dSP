@@ -2,7 +2,7 @@
 #pragma once
 #endif // _MSC_VER > 1000
 
-
+//#include "resource.h"       // main symbols
 // CPlotPropTabCtrl dialog
 
 class CPlotPropTabCtrl : public CTabCtrl

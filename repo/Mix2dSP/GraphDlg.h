@@ -15,7 +15,7 @@
 #include "afxwin.h"
 #include "Mix_Prog.h"
 #include "Gldocument.h"
-//#include "Plot3dDocTemplate.h"
+#include "Plot3dDocTemplate.h"
 #include "Plot3dFrameWnd.h"
 #include "Plot3dCtrl.h"
 

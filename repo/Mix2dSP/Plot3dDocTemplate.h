@@ -7,8 +7,9 @@
 // DFVDocTemplate.h : header file
 //
 
-#include "Plot3dDoc.h"
+//#include "Plot3dDoc.h"
 
+class CPlot3dDoc;
 
 /////////////////////////////////////////////////////////////////////////////
 // CDFVDocTemplate command target

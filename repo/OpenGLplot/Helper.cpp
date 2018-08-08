@@ -14,28 +14,6 @@
 #include "StdAfx.h"
 #include "Helper.h"
 
-//#ifndef ioinfo
-//typedef struct {
-//	long osfhnd;	// underlying OS file HANDLE
-//	char osfile;	// attributes of file (e.g., open in text mode?)
-//	char pipech;	// one char buffer for handles opened on pipes
-//#ifdef _MT
-//	int lockinitflag;
-//	CRITICAL_SECTION lock;
-//#endif  /* _MT */
-//}   ioinfo;
-//#endif  //ioinfo
-//
-//#ifndef _pioinfo
-////ioinfo* __pioinfo[];
-//#define _pioinfo(i) ( __pioinfo[(i) >> IOINFO_L2E] + ((i) & (IOINFO_ARRAY_ELTS - 1)) )
-//extern "C" AFX_DATA_IMPORT ioinfo* __pioinfo[];
-//#endif  //_pioinfo
-//
-//#ifndef _osfile
-//#define _osfile(i)  ( _pioinfo(i)->osfile )
-//#endif  //_osfile
-
 
 #pragma warning(disable: 4996)
 #pragma warning(disable: 4459)
@@ -1526,6 +1504,8 @@ BOOL ReadLineFromStream(FILE*& stream, CString& str)
  	TCHAR cCurr = _T('\0');
 	int size = 0;
 	int fd = _fileno(stream);
+	ioinfo** ppioinfo;
+	ioinfo* pioinfo;
 
 	fpos_t pos = 0;
 	VERIFY(fgetpos(stream, &pos) == 0);
@@ -1541,12 +1521,15 @@ BOOL ReadLineFromStream(FILE*& stream, CString& str)
 
 	VERIFY(fsetpos(stream, &pos) == 0);
 
+	pioinfo = ppioinfo[(fd) >> IOINFO_L2E] + ((fd) & (IOINFO_ARRAY_ELTS - 1));
+
 	LPTSTR pBuffer = str.GetBuffer(size);
 	for (int k = 0; k < size; k++)
 	{
 		pBuffer[k] = (TCHAR)_fgettc(stream);
 	}
-	if (!(_osfile(fd) & FTEXT) && size > 0 && pBuffer[size-1] == _T('\r'))
+	//if (!(_osfile(fd) & FTEXT) && size > 0 && pBuffer[size-1] == _T('\r'))
+	if (!(pioinfo->osfile & FTEXT) && size > 0 && pBuffer[size - 1] == _T('\r'))
 	{
 		// skip '\r' when file is opened in text mode
 		pBuffer[size-1] = _T('\0');

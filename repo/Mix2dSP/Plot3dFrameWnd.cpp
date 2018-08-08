@@ -8,6 +8,8 @@
 #include "Plot3dView.h"
 #include "GraphDlg.h"
 
+
+
 #ifdef _DEBUG
 #define new DEBUG_NEW
 #undef THIS_FILE

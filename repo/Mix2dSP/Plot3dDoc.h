@@ -22,8 +22,9 @@
 #include "Scale.h"
 #include "GlDocument.h"
 #include "mix2dsp.h"
+#include "GraphDlg.h"
+//#include "MixView.h"
 
-#include "MixView.h"
 
 
 class CPlot3dDoc : public CGlDocument
@@ -35,17 +36,17 @@ protected: // Nur aus Serialisierung erzeugen
 // Attribute
 public:
 	// accessed by Plot2d, Plot3d and Surf
-	CMatrix m_X;
-	CMatrix m_Y;
-	CMatrix m_Z;
-	CMatrix m_X2;
-	CMatrix m_Y2;
-	CMatrix m_Z2;
-	CMatrix m_C2;
+	mymathfuncs::CMatrix m_X;
+	mymathfuncs::CMatrix m_Y;
+	mymathfuncs::CMatrix m_Z;
+	mymathfuncs::CMatrix m_X2;
+	mymathfuncs::CMatrix m_Y2;
+	mymathfuncs::CMatrix m_Z2;
+	mymathfuncs::CMatrix m_C2;
 	CScale m_S;
 	KINDOFACTION m_nLastAction;
 protected:
-	CMatrix m_tmpMatrix;
+	mymathfuncs::CMatrix m_tmpMatrix;
 	BOOL m_bIsValid;
 
 // Operationen
@@ -56,8 +57,8 @@ public:
 	void ShowPlot(CGraphDlg *pGraphDlg);
 
 protected:
-	void Scale2DView(const KINDOFSCALE& nKindOfScale, CScale& matS, CMatrix& matX, CMatrix& matY);
-	void Scale3DView(const KINDOFSCALE& nKindOfScale, CScale& matS, CMatrix& matX, CMatrix& matY, CMatrix& matZ);
+	void Scale2DView(const KINDOFSCALE& nKindOfScale, CScale& matS, mymathfuncs::CMatrix& matX, mymathfuncs::CMatrix& matY);
+	void Scale3DView(const KINDOFSCALE& nKindOfScale, CScale& matS, mymathfuncs::CMatrix& matX, mymathfuncs::CMatrix& matY, mymathfuncs::CMatrix& matZ);
 	void ComputeDemoOne();
 	void ComputeDemoTwo();
 

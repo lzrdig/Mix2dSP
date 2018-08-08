@@ -1,4 +1,5 @@
-#pragma once
+#if !defined(AFX_PLOT3DVIEW_H__04EC151F_9E30_11D5_8F75_0048546F01E8__INCLUDED_)
+#define AFX_PLOT3DVIEW_H__04EC151F_9E30_11D5_8F75_0048546F01E8__INCLUDED_
 
 #include "GlView.h"
 #include "Matrix.h"
@@ -62,4 +63,4 @@ public:
 	afx_msg void OnSettingChange(UINT uFlags, LPCTSTR lpszSection);
 };
 
-
+#endif // !defined(AFX_PLOT3DVIEW_H__04EC151F_9E30_11D5_8F75_0048546F01E8__INCLUDED_)

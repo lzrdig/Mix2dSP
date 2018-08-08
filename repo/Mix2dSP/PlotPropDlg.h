@@ -1,4 +1,5 @@
-#pragma once
+#if !defined(AFX_PLOTPROPDLG_H__04EC151F_9E30_11D5_8F75_0048546F01E9__INCLUDED_)
+#define AFX_PLOTPROPDLG_H__04EC151F_9E30_11D5_8F75_0048546F01E9__INCLUDED_
 
 #include "PlotPropTabCtrl.h"
 
@@ -24,3 +25,5 @@ protected:
 public:
 	virtual BOOL OnInitDialog();
 };
+
+#endif // !defined(AFX_PLOTPROPDLG_H__04EC151F_9E30_11D5_8F75_0048546F01E9__INCLUDED_)
