@@ -10,8 +10,36 @@
 // Helper.cpp: Implementierungsdatei
 //
 
+
 #include "StdAfx.h"
 #include "Helper.h"
+
+//#ifndef ioinfo
+//typedef struct {
+//	long osfhnd;	// underlying OS file HANDLE
+//	char osfile;	// attributes of file (e.g., open in text mode?)
+//	char pipech;	// one char buffer for handles opened on pipes
+//#ifdef _MT
+//	int lockinitflag;
+//	CRITICAL_SECTION lock;
+//#endif  /* _MT */
+//}   ioinfo;
+//#endif  //ioinfo
+//
+//#ifndef _pioinfo
+////ioinfo* __pioinfo[];
+//#define _pioinfo(i) ( __pioinfo[(i) >> IOINFO_L2E] + ((i) & (IOINFO_ARRAY_ELTS - 1)) )
+//extern "C" AFX_DATA_IMPORT ioinfo* __pioinfo[];
+//#endif  //_pioinfo
+//
+//#ifndef _osfile
+//#define _osfile(i)  ( _pioinfo(i)->osfile )
+//#endif  //_osfile
+
+
+#pragma warning(disable: 4996)
+#pragma warning(disable: 4459)
+
 
 static unsigned char three2eight[8] = {
 	0, 0111>>1, 0222>>1, 0333>>1, 0444>>1, 0555>>1, 0666>>1, 0377

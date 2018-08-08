@@ -24,6 +24,7 @@
 static char THIS_FILE[] = __FILE__;
 #endif
 
+#pragma warning(disable: 4456)
 /////////////////////////////////////////////////////////////////////////////
 // CFormPropertiesView
 

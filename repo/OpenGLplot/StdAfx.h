@@ -16,6 +16,9 @@
 #define WINVER 0x0701
 #define _WIN32_IE 0x601
 
+
+
+
 #if defined(_MSC_VER) && (_MSC_VER >= 1020)
 #pragma once
 #endif
@@ -148,6 +151,7 @@
 #define IOINFO_ARRAY_ELTS	(1 << IOINFO_L2E)
 #endif  //IOINFO_ARRAY_ELTS
 
+/**/
 #ifndef ioinfo
 typedef struct {
         long osfhnd;	// underlying OS file HANDLE
@@ -161,8 +165,9 @@ typedef struct {
 #endif  //ioinfo
 
 #ifndef _pioinfo
-//#define _pioinfo(i) ( __pioinfo[(i) >> IOINFO_L2E] + ((i) & (IOINFO_ARRAY_ELTS - 1)) )
-//extern "C" AFX_DATA_IMPORT ioinfo* __pioinfo[];
+//ioinfo* __pioinfo[];
+#define _pioinfo(i) ( __pioinfo[(i) >> IOINFO_L2E] + ((i) & (IOINFO_ARRAY_ELTS - 1)) )
+extern "C" AFX_DATA_IMPORT ioinfo* __pioinfo[];
 #endif  //_pioinfo
 
 #ifndef _osfile

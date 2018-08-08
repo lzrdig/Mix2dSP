@@ -9,3 +9,6 @@
 //	StdAfx.obj enthält die vorcompilierte Typinformation
 
 #include "StdAfx.h"
+
+#pragma warning(disable: 4456)
+#pragma warning(disable: 4996)

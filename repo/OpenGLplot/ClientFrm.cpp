@@ -24,6 +24,8 @@ static char THIS_FILE[] = __FILE__;
 #define ID_TOOLTIP 1
 #endif
 
+#pragma warning(disable: 4457)
+
 /////////////////////////////////////////////////////////////////////////////
 // CClientFrame
 

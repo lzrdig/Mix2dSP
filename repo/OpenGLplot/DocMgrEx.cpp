@@ -22,6 +22,8 @@
 static char THIS_FILE[] = __FILE__;
 #endif
 
+#pragma warning(disable: 4457)
+
 static void AFXAPI _AfxAppendFilterSuffix(CString& filter, OPENFILENAME& ofn,
 	CDocTemplate* pTemplate, CString* pstrDefaultExt)
 {
